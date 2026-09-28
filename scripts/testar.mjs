@@ -125,7 +125,7 @@ try {
   console.log('\nÂncoras do menu')
   for (const w of [1440, 390]) {
     await page.setViewport(tela(w))
-    for (const alvo of ['servicos', 'obras', 'sobre', 'diferenciais', 'contato']) {
+    for (const alvo of ['servicos', 'obras', 'sobre', 'como-funciona', 'contato']) {
       await page.goto(BASE + '/', { waitUntil: 'networkidle2' })
       if (w < 768) {
         await page.click('.topo__menu')

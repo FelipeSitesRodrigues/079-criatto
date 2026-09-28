@@ -2,7 +2,7 @@
    Computador (mockup desktop): a casa à noite ocupa o hero inteiro como fundo, puxada pra
    direita (a caixa da foto começa em 13% da largura e o excesso sai pela borda direita),
    e um degradê preto da esquerda deixa o lado do texto limpo. Rótulo (o H1 da página,
-   com a palavra-chave), a headline enorme em caixa alta com "sua casa." em laranja, o
+   com a palavra-chave), a headline enorme em caixa alta com "alto padrão." em laranja, o
    subtítulo, os dois botões e, na base, a faixa dos 4 selos com divisórias.
    Celular (mockup mobile): tudo empilhado. A foto em pé (a mesma casa, feita pra celular)
    entra depois do subtítulo, com o céu passando por trás do fim do texto, e os botões e
@@ -151,7 +151,8 @@
 }
 /* celular: os selos em lista, um por linha, como no mockup */
 @media (max-width: 39.99em) {
-  /* "CONSTRUÍMOS" tem 8,9 vezes o tamanho da fonte: acompanha a tela pra caber em 320 px */
+  /* "ENGENHARIA" e "CONSTRUÇÃO" (as palavras mais largas do título) cabem com folga na conta
+     feita pra "CONSTRUÍMOS" (8,9 vezes o tamanho da fonte): acompanha a tela pra caber em 320 px */
   .hero__titulo { font-size: min(40px, calc((100vw - 40px) / 9.1)); }
   .hero__selos { grid-template-columns: minmax(0, 1fr); gap: 22px; padding-block: 34px 40px; }
   .selo { gap: 18px; }

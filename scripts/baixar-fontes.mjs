@@ -52,13 +52,16 @@ const kb = (b) => (b.length / 1024).toFixed(1) + ' KB'
 const ab = (buf) => buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength)
 
 // largura média de um texto de referência, em em
-const AMOSTRA_TITULO = 'CONSTRUÍMOS UTI. IMAGINE O CUIDADO COM SUA CASA. DO ALICERCE AO ACABAMENTO, UMA CONSTRUTORA SÓ. ONDE ERRAR NÃO É UMA OPÇÃO. TRANSFORMAÇÕES QUE VALORIZAM.'
-const AMOSTRA_TEXTO = 'Construção de casas e reforma de apartamentos de alto padrão em Goiânia. A equipe que entrega hospitais cuida da sua obra, com prazo e custo sob controle, do planejamento à entrega da chave.'
+// só o título do hero: é o único acima da dobra, e a troca de fonte nele mexe na foto do
+// celular (CLS). Com a média dos títulos, 'ENGENHARIA E' quebrava na reserva e não na Archivo
+const AMOSTRA_TITULO = 'ENGENHARIA E CONSTRUÇÃO DE ALTO PADRÃO.'
+const AMOSTRA_TEXTO = 'Construção e reforma de residências, obras hospitalares, corporativas e comerciais em Goiânia e região, com planejamento e rigor técnico.'
 const largura = (fonte, texto) => fonte.getAdvanceWidth(texto, fonte.unitsPerEm) / fonte.unitsPerEm
 
-function fallback(nome, fonte, local, arqLocal, amostra) {
+// larguraFonte: largura da amostra na fonte real, em em (padrão: medida na própria instância)
+function fallback(nome, fonte, local, arqLocal, amostra, larguraFonte = largura(fonte, amostra)) {
   const ref = opentype.parse(ab(readFileSync(arqLocal)))
-  const ajuste = largura(fonte, amostra) / largura(ref, amostra)
+  const ajuste = larguraFonte / largura(ref, amostra)
   const upm = fonte.unitsPerEm
   const hhea = fonte.tables.hhea
   const pct = (v) => (v * 100).toFixed(2) + '%'
@@ -93,10 +96,17 @@ saida.push(`@font-face {
   font-display: swap;
   src: url('/assets/fonts/archivo-var.woff2') format('woff2');
 }`)
-// medidas: a instância 125/800 (títulos) contra a Arial Black; a 100/600 (menu e botões) contra a Arial negrito
+// medidas: os títulos (800, largura --largura-titulo) contra a Arial Black; a 100/600 (menu e botões)
+// contra a Arial negrito. A API do Google só entrega instância estática em 100 e 125 (pedir 112
+// devolve a 100), então a largura dos títulos sai interpolada entre as duas: com a 125 pura a
+// reserva ficava 11% mais larga e 'ENGENHARIA E' quebrava só nela (CLS no celular, copy v2)
+const LARGURA_TITULO = 112 // --largura-titulo no src/css/_base.css
 const archivoTitulo = opentype.parse(ab(await baixar('Archivo:wdth,wght@125,800', 'archivo-125-800.ttf')))
+const archivoTitulo100 = opentype.parse(ab(await baixar('Archivo:wght@800', 'archivo-100-800.ttf')))
+const fracao = (LARGURA_TITULO - 100) / 25
+const larguraTitulo = largura(archivoTitulo100, AMOSTRA_TITULO) * (1 - fracao) + largura(archivoTitulo, AMOSTRA_TITULO) * fracao
 const archivoUtil = opentype.parse(ab(await baixar('Archivo:wght@600', 'archivo-100-600.ttf')))
-saida.push(fallback('Archivo Titulo fallback', archivoTitulo, ['Arial Black', 'ArialMT-Black'], 'C:/Windows/Fonts/ariblk.ttf', AMOSTRA_TITULO))
+saida.push(fallback('Archivo Titulo fallback', archivoTitulo, ['Arial Black', 'ArialMT-Black'], 'C:/Windows/Fonts/ariblk.ttf', AMOSTRA_TITULO, larguraTitulo))
 saida.push(fallback('Archivo fallback', archivoUtil, ['Arial Bold', 'Arial-BoldMT', 'Arial'], 'C:/Windows/Fonts/arialbd.ttf', AMOSTRA_TITULO))
 
 // ---------------------------------------------------------------- Manrope variável 400 a 700 (texto)

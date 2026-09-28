@@ -57,10 +57,12 @@ chega perto). Sem JS ou pra quem pede menos movimento, fica o PNG parado.
 
 ## Decisões que não estão no mockup
 
-- **Copy:** onde o mockup tem outro texto, vale a copy oficial (headline "Construímos UTI.
-  Imagine o cuidado com sua casa.", títulos de Serviços, Sobre, Obras e Como funciona, os
-  passos e os selos). Os títulos "Transformações que valorizam", "Resultados que geram
-  confiança" e "Vamos tirar seu projeto do papel?" são do mockup e do prompt de execução.
+- **Copy (v2.0, 2026-09-28):** o Usley aprovou o design e pediu o texto todo revisado:
+  português formal, no registro do site antigo, sem comparar casa com hospital e com
+  residencial, hospitalar e corporativo/comercial cada um no seu lugar. Todos os textos estão
+  na tabela da v2.0 no topo do `copy-site.md`. O "Construímos UTI" saiu do site, do schema e
+  da imagem de compartilhamento (`node scripts/og.mjs`). O menu trocou "Diferenciais" (que
+  apontava pra seção hospitalar) por "Como trabalhamos".
 - **Serviços 7 e 8** (Projetos personalizados e Consultoria e planejamento) não estão na copy:
   entraram pelo mockup e pelas imagens que o Felipe gerou, com o texto do próprio mockup.
 - **Resultados:** o mockup tinha 3 depoimentos inventados. Sem avaliação real, a faixa mostra
@@ -71,7 +73,7 @@ chega perto). Sem JS ou pra quem pede menos movimento, fica o PNG parado.
   "Ver todas as obras" transforma o carrossel em grade.
 - **Antes e depois:** o terceiro card é "Obra comercial" (nome do arquivo do Felipe; o mockup
   dizia "Condomínio de luxo", mas a imagem é o prédio da Porto Seguro). A seção leva a legenda
-  "Imagens ilustrativas do serviço".
+  "Imagens meramente ilustrativas".
 - **Header:** o telefone abre o WhatsApp (o número é de WhatsApp; `tel:` no computador abre
   seletor de aplicativo). Entre 1024 e 1279 px o número vira só o ícone.
 - **Rodapé:** só WhatsApp e e-mail nos ícones (a Criatto não tem Instagram nem Facebook).

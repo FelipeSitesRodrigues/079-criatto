@@ -342,7 +342,7 @@ function schema() {
     founder: { '@type': 'Person', name: cfg.dono },
     description:
       'A Criatto Construtora é uma construtora de Goiânia, fundada em 2010, que constrói casas de alto padrão, reforma apartamentos e casas e executa obras hospitalares, corporativas e comerciais em Goiânia e região.',
-    slogan: 'Construímos UTI. Imagine o cuidado com sua casa.',
+    slogan: 'Engenharia e construção de alto padrão.',
     telephone: cfg.telefone,
     email: cfg.email,
     address: { '@type': 'PostalAddress', streetAddress: e.ruaSchema, addressLocality: e.cidade, addressRegion: e.uf, postalCode: e.cep, addressCountry: 'BR' },

@@ -21,45 +21,46 @@
 /* no primeiro clique numa âncora (_base.js) tudo é desenhado de uma vez */
 .cv-pronto :is(.servicos, .sobre, .obras, .antes, .alta, .como, .resultados, .cta, .rodape) { content-visibility: visible; }
 
-.servicos { contain-intrinsic-size: auto 870px; }
-.sobre { contain-intrinsic-size: auto 731px; }
+.servicos { contain-intrinsic-size: auto 843px; }
+.sobre { contain-intrinsic-size: auto 682px; }
 .obras { contain-intrinsic-size: auto 509px; }
-.antes { contain-intrinsic-size: auto 498px; }
-.alta { contain-intrinsic-size: auto 342px; }
+.antes { contain-intrinsic-size: auto 519px; }
+.alta { contain-intrinsic-size: auto 409px; }
 .como { contain-intrinsic-size: auto 327px; }
 .resultados { contain-intrinsic-size: auto 150px; }
-.cta { contain-intrinsic-size: auto 274px; }
+.cta { contain-intrinsic-size: auto 301px; }
 .rodape { contain-intrinsic-size: auto 369px; }
 
 @media (max-width: 79.99em) {
-  .servicos { contain-intrinsic-size: auto 864px; }
-  .sobre { contain-intrinsic-size: auto 713px; }
-  .obras { contain-intrinsic-size: auto 482px; }
-  .antes { contain-intrinsic-size: auto 448px; }
-  .alta { contain-intrinsic-size: auto 392px; }
-  .como { contain-intrinsic-size: auto 384px; }
+  .servicos { contain-intrinsic-size: auto 829px; }
+  .sobre { contain-intrinsic-size: auto 681px; }
+  .obras { contain-intrinsic-size: auto 429px; }
+  .antes { contain-intrinsic-size: auto 443px; }
+  .alta { contain-intrinsic-size: auto 418px; }
+  .como { contain-intrinsic-size: auto 360px; }
+  .resultados { contain-intrinsic-size: auto 289px; }
   .cta { contain-intrinsic-size: auto 323px; }
-  .rodape { contain-intrinsic-size: auto 357px; }
+  .rodape { contain-intrinsic-size: auto 380px; }
 }
 @media (max-width: 63.99em) {
-  .servicos { contain-intrinsic-size: auto 1527px; }
-  .sobre { contain-intrinsic-size: auto 1184px; }
-  .obras { contain-intrinsic-size: auto 605px; }
-  .antes { contain-intrinsic-size: auto 879px; }
+  .servicos { contain-intrinsic-size: auto 1690px; }
+  .sobre { contain-intrinsic-size: auto 1198px; }
+  .obras { contain-intrinsic-size: auto 636px; }
+  .antes { contain-intrinsic-size: auto 906px; }
   .alta { contain-intrinsic-size: auto 696px; }
-  .como { contain-intrinsic-size: auto 936px; }
+  .como { contain-intrinsic-size: auto 963px; }
   .resultados { contain-intrinsic-size: auto 257px; }
-  .cta { contain-intrinsic-size: auto 599px; }
+  .cta { contain-intrinsic-size: auto 625px; }
   .rodape { contain-intrinsic-size: auto 815px; }
 }
 @media (max-width: 39.99em) {
-  .servicos { contain-intrinsic-size: auto 2867px; }
-  .sobre { contain-intrinsic-size: auto 1190px; }
-  .obras { contain-intrinsic-size: auto 738px; }
-  .antes { contain-intrinsic-size: auto 1531px; }
-  .alta { contain-intrinsic-size: auto 590px; }
-  .como { contain-intrinsic-size: auto 1063px; }
+  .servicos { contain-intrinsic-size: auto 2912px; }
+  .sobre { contain-intrinsic-size: auto 1207px; }
+  .obras { contain-intrinsic-size: auto 766px; }
+  .antes { contain-intrinsic-size: auto 1584px; }
+  .alta { contain-intrinsic-size: auto 616px; }
+  .como { contain-intrinsic-size: auto 1143px; }
   .resultados { contain-intrinsic-size: auto 338px; }
-  .cta { contain-intrinsic-size: auto 502px; }
-  .rodape { contain-intrinsic-size: auto 1208px; }
+  .cta { contain-intrinsic-size: auto 529px; }
+  .rodape { contain-intrinsic-size: auto 1230px; }
 }

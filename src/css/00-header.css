@@ -54,6 +54,7 @@
   padding: 10px 0;
   color: rgb(255 255 255 / .9);
   font: 500 15.5px/1 var(--fonte-texto);
+  white-space: nowrap;
   transition: color .25s ease;
 }
 .menu__lista a::after {
@@ -83,13 +84,20 @@
 .topo__cta { flex: none; min-height: 52px; padding-inline: 26px; }
 .topo__menu { display: none; }
 
+/* até 1439: "Como trabalhamos" e "Solicitar orçamento" (copy v2) alargaram o topo; com o
+   espaço original entre os links, o botão passava da margem entre 1024 e 1366 */
+@media (min-width: 64em) and (max-width: 89.99em) {
+  .menu__lista { gap: clamp(16px, 1.6vw, 24px); }
+}
 /* 1024 a 1279: o número vira só o ícone, pro menu caber numa linha */
 @media (min-width: 64em) and (max-width: 79.99em) {
+  .topo__barra { gap: 16px; }
   .topo__fone { width: 44px; height: 44px; justify-content: center; border: 1.5px solid rgb(255 255 255 / .28); border-radius: 50%; }
   .topo__fone-num { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .topo__fone .i { width: 20px; height: 20px; }
+  .topo__cta { padding-inline: 20px; }
   .marca__logo { width: 130px; }
-  .menu__lista a { font-size: 15px; }
+  .menu__lista a { font-size: 14.5px; }
 }
 
 /* ---------------------------------------------------------------- celular e tablet: logo e menu em tela cheia */

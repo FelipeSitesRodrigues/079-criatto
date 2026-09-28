@@ -10,17 +10,17 @@
 @font-face {
   font-family: 'Archivo Titulo fallback';
   src: local('Arial Black'), local('ArialMT-Black');
-  size-adjust: 116.66%;
-  ascent-override: 75.26%;
-  descent-override: 18.00%;
+  size-adjust: 104.55%;
+  ascent-override: 83.98%;
+  descent-override: 20.09%;
   line-gap-override: 0.00%;
 }
 @font-face {
   font-family: 'Archivo fallback';
   src: local('Arial Bold'), local('Arial-BoldMT'), local('Arial');
-  size-adjust: 97.89%;
-  ascent-override: 89.69%;
-  descent-override: 21.45%;
+  size-adjust: 97.53%;
+  ascent-override: 90.03%;
+  descent-override: 21.53%;
   line-gap-override: 0.00%;
 }
 @font-face {
@@ -33,8 +33,8 @@
 @font-face {
   font-family: 'Manrope fallback';
   src: local('Arial'), local('Helvetica'), local('Roboto');
-  size-adjust: 101.98%;
-  ascent-override: 104.53%;
-  descent-override: 29.42%;
+  size-adjust: 102.44%;
+  ascent-override: 104.06%;
+  descent-override: 29.29%;
   line-gap-override: 0.00%;
 }

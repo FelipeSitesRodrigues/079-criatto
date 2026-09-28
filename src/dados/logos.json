@@ -1,11 +1,53 @@
 {
-  "_leia": "Logos da esteira de 'Resultados que geram confiança', em preto e branco (pedido do Usley: todas as logos, em carrossel passando). Os arquivos vêm do site antigo (SITE ANTIGO/logos-clientes, 512x155): uns são preto no branco, outros branco no preto (inverter: true). O processamento tira o fundo e grava todos em preto sobre transparente. area = o que a equipe entregou pra esse cliente, na linha de baixo do cartão. escala ajusta o tamanho visual (logo largo e baixo x logo com símbolo alto).",
+  "_leia": "Logos da esteira de 'Experiência com grandes marcas', em preto e branco (pedido do Usley: todas as logos, em carrossel passando). Os arquivos vêm do site antigo (SITE ANTIGO/logos-clientes, 512x155): uns são preto no branco, outros branco no preto (inverter: true). O processamento tira o fundo e grava todos em preto sobre transparente. area = o que a equipe entregou pra esse cliente, na linha de baixo do cartão. escala ajusta o tamanho visual (logo largo e baixo x logo com símbolo alto).",
   "itens": [
-    { "id": "rede-dor", "nome": "Rede D’Or", "arquivo": "SITE ANTIGO/logos-clientes/logo-dor.png", "inverter": false, "area": "Hospitais", "escala": 1 },
-    { "id": "dasa", "nome": "DASA", "arquivo": "SITE ANTIGO/logos-clientes/log-dasa.png", "inverter": false, "area": "Laboratórios", "escala": 0.92 },
-    { "id": "itau", "nome": "Itaú", "arquivo": "SITE ANTIGO/logos-clientes/logo-itau.png", "inverter": true, "area": "Agências bancárias", "escala": 0.8 },
-    { "id": "banco-do-brasil", "nome": "Banco do Brasil", "arquivo": "SITE ANTIGO/logos-clientes/logo-bb.png", "inverter": true, "area": "Agências bancárias", "escala": 1 },
-    { "id": "porto-seguro", "nome": "Porto Seguro", "arquivo": "SITE ANTIGO/logos-clientes/logo-porto-seguro.png", "inverter": false, "area": "Obras corporativas", "escala": 0.95 },
-    { "id": "norte-energia", "nome": "Norte Energia", "arquivo": "SITE ANTIGO/logos-clientes/logo-norte-energia.png", "inverter": true, "area": "Obras institucionais", "escala": 1 }
+    {
+      "id": "rede-dor",
+      "nome": "Rede D’Or",
+      "arquivo": "SITE ANTIGO/logos-clientes/logo-dor.png",
+      "inverter": false,
+      "area": "Hospitais",
+      "escala": 1
+    },
+    {
+      "id": "dasa",
+      "nome": "DASA",
+      "arquivo": "SITE ANTIGO/logos-clientes/log-dasa.png",
+      "inverter": false,
+      "area": "Laboratórios",
+      "escala": 0.92
+    },
+    {
+      "id": "itau",
+      "nome": "Itaú",
+      "arquivo": "SITE ANTIGO/logos-clientes/logo-itau.png",
+      "inverter": true,
+      "area": "Agências bancárias",
+      "escala": 0.8
+    },
+    {
+      "id": "banco-do-brasil",
+      "nome": "Banco do Brasil",
+      "arquivo": "SITE ANTIGO/logos-clientes/logo-bb.png",
+      "inverter": true,
+      "area": "Agências bancárias",
+      "escala": 1
+    },
+    {
+      "id": "porto-seguro",
+      "nome": "Porto Seguro",
+      "arquivo": "SITE ANTIGO/logos-clientes/logo-porto-seguro.png",
+      "inverter": false,
+      "area": "Obras corporativas",
+      "escala": 0.95
+    },
+    {
+      "id": "norte-energia",
+      "nome": "Norte Energia",
+      "arquivo": "SITE ANTIGO/logos-clientes/logo-norte-energia.png",
+      "inverter": true,
+      "area": "Obras institucionais",
+      "escala": 1
+    }
   ]
 }

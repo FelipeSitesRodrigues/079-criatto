@@ -33,9 +33,9 @@ h1 span{color:#F4661C}
 <div class="veu"></div>
 <div class="txt">
   <img class="logo" src="/assets/img/logo-320.webp" alt=""><span class="nome">Construtora</span>
-  <p class="rot">Casas e reformas de alto padrão em Goiânia</p>
-  <h1>Construímos UTI.<br>Imagine o cuidado<br>com <span>sua casa.</span></h1>
-  <p class="pe"><span><b>16 anos</b> de Criatto</span><span><b>Obra hospitalar</b> Rede D’Or e DASA</span></p>
+  <p class="rot">Construtora de alto padrão em Goiânia</p>
+  <h1>Engenharia e<br>construção de<br><span>alto padrão.</span></h1>
+  <p class="pe"><span><b>16 anos</b> em Goiânia</span><span><b>Residencial</b></span><span><b>Hospitalar</b></span><span><b>Corporativo</b> e comercial</span></p>
 </div>
 <div class="faixa"></div>
 </body></html>`

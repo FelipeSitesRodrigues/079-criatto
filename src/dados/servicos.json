@@ -1,10 +1,10 @@
 {
-  "_leia": "Os 8 cartões da seção Serviços, na ordem do mockup (4 por linha). nome, descricao e mensagem vêm da copy-site.md v1.0 (bloco 4); os dois últimos (projetos e consultoria) não estão na copy: entraram pelo mockup aprovado e pelas imagens que o Felipe gerou pra eles, com o texto do próprio mockup. mensagem é o que vai entre asteriscos no WhatsApp. foto: arquivo em Recursos Site; ia = imagem gerada (ilustrativa), sem ia = foto real de obra da equipe. focoY recorta a faixa 16:9 (0 = topo, 1 = base). rodape = ordem na lista de serviços do rodapé (só os 6 do mockup). O cartão de obras corporativas usa a Plataforma Íon do portfólio antigo (o Polo Empresarial já está na galeria); recorte tira a legenda gravada na foto.",
+  "_leia": "Os 8 cartões da seção Serviços, na ordem do mockup (4 por linha). nome e descricao seguem a copy v2.0 (revisão pedida pelo Usley em 2026-09-28: norma culta, registro formal, sem a comparação casa x hospital); mensagem vem da copy v1.0; os dois últimos (projetos e consultoria) não estão na copy: entraram pelo mockup aprovado e pelas imagens que o Felipe gerou pra eles, com o texto do próprio mockup. mensagem é o que vai entre asteriscos no WhatsApp. foto: arquivo em Recursos Site; ia = imagem gerada (ilustrativa), sem ia = foto real de obra da equipe. focoY recorta a faixa 16:9 (0 = topo, 1 = base). rodape = ordem na lista de serviços do rodapé (só os 6 do mockup). O cartão de obras corporativas usa a Plataforma Íon do portfólio antigo (o Polo Empresarial já está na galeria); recorte tira a legenda gravada na foto.",
   "itens": [
     {
       "id": "casas",
       "nome": "Construção de casas de alto padrão",
-      "descricao": "Do terreno à entrega da chave, seguindo o projeto do seu arquiteto.",
+      "descricao": "Do terreno à entrega das chaves, com execução fiel ao projeto arquitetônico.",
       "mensagem": "construção de casa",
       "foto": {
         "arquivo": "CARDS DE SERVIÇOS/construções de casa de alto padrão..png",
@@ -17,8 +17,8 @@
     },
     {
       "id": "apartamentos",
-      "nome": "Reforma de apartamento",
-      "descricao": "Completa ou por ambiente, dentro das regras do seu condomínio.",
+      "nome": "Reforma de apartamentos",
+      "descricao": "Obras completas ou por ambiente, em conformidade com as normas do condomínio.",
       "mensagem": "reforma de apartamento",
       "foto": {
         "arquivo": "CARDS DE SERVIÇOS/REFORMAS DE APARTAMENTOS.png",
@@ -27,12 +27,12 @@
       },
       "alt": "Sala e cozinha integradas de apartamento reformado (imagem ilustrativa)",
       "rodape": 2,
-      "rodapeNome": "Reforma de apartamento"
+      "rodapeNome": "Reforma de apartamentos"
     },
     {
       "id": "ampliacao",
-      "nome": "Reforma e ampliação de casa",
-      "descricao": "Suíte nova, área gourmet, fachada ou a casa inteira renovada.",
+      "nome": "Reforma e ampliação de casas",
+      "descricao": "Novas suítes, áreas gourmet, fachadas e a renovação completa do imóvel.",
       "mensagem": "reforma ou ampliação de casa",
       "foto": {
         "arquivo": "CARDS DE SERVIÇOS/REFORMA E AMPLIAÇÃO DE CASAS.png",
@@ -46,7 +46,7 @@
     {
       "id": "hospitalares",
       "nome": "Obras hospitalares e clínicas",
-      "descricao": "UTI, centro obstétrico, consultório e laboratório, com o rigor que a saúde exige.",
+      "descricao": "UTIs, centros obstétricos, consultórios e laboratórios, com o rigor que a área da saúde exige.",
       "mensagem": "obra hospitalar ou de clínica",
       "foto": {
         "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/obras hospitalares/APARTAMENTO INTERNACAO VIP.JPG",
@@ -60,7 +60,7 @@
     {
       "id": "corporativas",
       "nome": "Obras corporativas e comerciais",
-      "descricao": "Escritório, loja e agência, com cronograma pensado pra abrir no dia certo.",
+      "descricao": "Escritórios, lojas e agências, com cronograma planejado para inaugurar na data prevista.",
       "mensagem": "obra corporativa ou comercial",
       "foto": {
         "arquivo": "SITE ANTIGO/portfolio/3.png",
@@ -79,7 +79,7 @@
     {
       "id": "instalacoes",
       "nome": "Instalações e acabamento",
-      "descricao": "Elétrica, hidráulica, prevenção de incêndio e acabamento fino.",
+      "descricao": "Sistemas elétricos, hidráulicos e de prevenção de incêndio, com acabamento fino.",
       "mensagem": "instalações e acabamento",
       "foto": {
         "arquivo": "CARDS DE SERVIÇOS/instalação e acabamento..png",
@@ -93,7 +93,7 @@
     {
       "id": "projetos",
       "nome": "Projetos personalizados",
-      "descricao": "Soluções sob medida para cada necessidade.",
+      "descricao": "Soluções desenvolvidas sob medida para a necessidade de cada cliente.",
       "mensagem": "projeto personalizado",
       "foto": {
         "arquivo": "CARDS DE SERVIÇOS/PROJETOS PERSONALIZADOS.png",
@@ -105,7 +105,7 @@
     {
       "id": "consultoria",
       "nome": "Consultoria e planejamento",
-      "descricao": "Estudo de viabilidade, custos e cronograma.",
+      "descricao": "Estudos de viabilidade, estimativa de custos e elaboração de cronograma.",
       "mensagem": "consultoria e planejamento",
       "foto": {
         "arquivo": "CARDS DE SERVIÇOS/CONSULTORIA E PLANEJAMENTO.png",
