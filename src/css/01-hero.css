@@ -1,0 +1,160 @@
+/* ---------------------------------------------------------------- hero
+   Computador (mockup desktop): a casa à noite ocupa o hero inteiro como fundo, puxada pra
+   direita (a caixa da foto começa em 13% da largura e o excesso sai pela borda direita),
+   e um degradê preto da esquerda deixa o lado do texto limpo. Rótulo (o H1 da página,
+   com a palavra-chave), a headline enorme em caixa alta com "sua casa." em laranja, o
+   subtítulo, os dois botões e, na base, a faixa dos 4 selos com divisórias.
+   Celular (mockup mobile): tudo empilhado. A foto em pé (a mesma casa, feita pra celular)
+   entra depois do subtítulo, com o céu passando por trás do fim do texto, e os botões e
+   os selos vêm embaixo dela. Tablet: o mesmo empilhado, com a foto deitada.
+   Abertura: só transform e opacity (memória do 077: clip-path e background-position na
+   abertura derrubaram o celular pra 67). A foto não entra com opacidade (é o LCP).      */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: clamp(680px, 52vw, 880px);
+  padding-top: 112px;
+  overflow: clip;
+  background: var(--preto);
+}
+.hero__midia { position: absolute; inset: 0 auto 0 13%; z-index: -2; width: 100%; }
+.hero__foto, .hero__foto img { display: block; width: 100%; height: 100%; max-width: none; }
+.hero__foto img { object-fit: cover; object-position: 50% 38%; }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--preto) 0%, var(--preto) 12%, rgb(11 11 11 / .9) 24%, rgb(11 11 11 / .62) 37%, rgb(11 11 11 / .18) 50%, rgb(11 11 11 / 0) 60%),
+    linear-gradient(0deg, rgb(11 11 11 / .96) 0%, rgb(11 11 11 / .72) 12%, rgb(11 11 11 / 0) 30%),
+    linear-gradient(180deg, rgb(11 11 11 / .55) 0%, rgb(11 11 11 / 0) 22%);
+}
+
+.hero__conteudo { align-self: center; padding-block: clamp(24px, 3vw, 44px) clamp(28px, 3vw, 48px); }
+.hero__rotulo {
+  max-width: 44em;
+  color: rgb(255 255 255 / .9);
+  font: 500 15.5px/1.35 var(--fonte-util);
+  font-stretch: 100%;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.hero__titulo {
+  margin-top: 16px;
+  color: var(--branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-stretch: var(--largura-titulo);
+  font-size: clamp(38px, 1rem + 3.35vw, 66px);
+  line-height: .98;
+  letter-spacing: -.006em;
+  text-transform: uppercase;
+}
+.hero__linha { display: block; }
+.hero__titulo .destaque { color: var(--laranja); }
+.hero__sub { max-width: 31em; margin-top: 22px; color: rgb(255 255 255 / .86); font-size: clamp(16px, .92rem + .3vw, 19px); line-height: 1.55; }
+.hero__botoes { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+.hero__cta { min-height: 64px; padding-inline: 24px 30px; }
+.hero__cta .i { width: 30px; height: 30px; }
+.hero__cta-quebra { display: block; }
+.hero__obras { min-height: 64px; padding-inline: 34px; }
+
+/* faixa dos selos: 4 colunas com divisória fina, ícone de linha laranja, nome em caixa alta */
+.hero__selos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding-bottom: clamp(26px, 2.6vw, 38px); }
+.selo { display: flex; align-items: center; gap: 16px; padding-inline: clamp(14px, 2vw, 32px); }
+.selo:first-child { padding-left: 0; }
+.selo + .selo { border-left: 1px solid rgb(255 255 255 / .16); }
+.selo__i { width: 44px; height: 44px; color: var(--laranja); }
+.selo__txt { display: grid; gap: 4px; }
+.selo__nome { color: var(--branco); font: 700 15px/1.2 var(--fonte-util); font-stretch: 106%; letter-spacing: .02em; text-transform: uppercase; }
+.selo__sub { color: rgb(255 255 255 / .66); font-size: 13.5px; line-height: 1.35; }
+
+/* abertura (uma vez, no carregamento): só transform e opacity */
+@keyframes hero-sobe { from { opacity: 0; transform: translateY(26px); } }
+@keyframes hero-entra { from { opacity: 0; transform: translateX(-14px); } }
+@keyframes hero-foto { from { transform: scale(1.06); } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero__foto img { animation: hero-foto 2.2s var(--ease-out) both; }
+  .hero__rotulo { animation: hero-entra .8s var(--ease-suave) .1s backwards; }
+  .hero__linha { animation: hero-sobe .9s var(--ease-suave) backwards; }
+  .hero__linha:nth-child(1) { animation-delay: .18s; }
+  .hero__linha:nth-child(2) { animation-delay: .28s; }
+  .hero__linha:nth-child(3) { animation-delay: .38s; }
+  .hero__sub { animation: hero-sobe .9s var(--ease-suave) .5s backwards; }
+  .hero__botoes { animation: hero-sobe .9s var(--ease-suave) .6s backwards; }
+  .hero .selo { animation: hero-sobe .8s var(--ease-suave) backwards; }
+  .hero .selo:nth-child(1) { animation-delay: .72s; }
+  .hero .selo:nth-child(2) { animation-delay: .8s; }
+  .hero .selo:nth-child(3) { animation-delay: .88s; }
+  .hero .selo:nth-child(4) { animation-delay: .96s; }
+}
+
+/* 1024 a 1279: a foto começa mais cedo e o título diminui um pouco */
+@media (min-width: 64em) and (max-width: 79.99em) {
+  .hero__midia { left: 8%; }
+  .selo { gap: 12px; }
+  .selo__i { width: 38px; height: 38px; }
+  .selo__nome { font-size: 14px; }
+}
+
+/* ---------------------------------------------------------------- tablet e celular: empilhado */
+@media (max-width: 63.99em) {
+  .hero { display: flex; flex-direction: column; min-height: 0; padding-top: 72px; }
+  .hero::before { display: none; }
+  /* a foto sai do fundo e entra no fluxo, entre o subtítulo e os botões */
+  .hero__midia {
+    position: relative;
+    inset: auto;
+    z-index: -1;
+    order: 2;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 941 / 1330;
+    margin-top: -44vw;
+  }
+  .hero__foto img { object-position: 50% 0; }
+  .hero__midia::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, var(--preto) 0%, rgb(11 11 11 / .78) 16%, rgb(11 11 11 / 0) 34%),
+      linear-gradient(0deg, var(--preto) 0%, rgb(11 11 11 / .7) 12%, rgb(11 11 11 / 0) 26%);
+  }
+  .hero__botoes { order: 3; }
+  .hero__selos { order: 4; }
+  /* os botões saem do bloco de texto e vão pra depois da foto (display: contents solta os filhos) */
+  .hero__conteudo { display: contents; }
+  .hero__rotulo, .hero__titulo, .hero__sub { width: min(var(--container), 100% - var(--margem) * 2); margin-inline: auto; }
+  .hero__rotulo { order: 1; padding-top: 24px; font-size: 14px; }
+  .hero__titulo { order: 1; margin-top: 12px; }
+  .hero__linha { display: inline; animation: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__titulo { animation: hero-sobe .9s var(--ease-suave) .18s backwards; }
+  }
+  .hero__sub { order: 1; position: relative; z-index: 1; margin-top: 18px; }
+  .hero__botoes { display: grid; gap: 12px; width: min(var(--container), 100% - var(--margem) * 2); margin: -34px auto 0; position: relative; z-index: 1; }
+  .hero__cta, .hero__obras { width: 100%; justify-content: center; }
+  .hero__selos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 20px; padding-block: 36px 44px; }
+  .selo, .selo:first-child { padding-inline: 0; }
+  .selo + .selo { border-left: 0; }
+}
+/* tablet: a foto deitada (mesma casa), em faixa */
+@media (min-width: 40em) and (max-width: 63.99em) {
+  .hero__midia { aspect-ratio: 16 / 9.6; margin-top: -10vw; }
+  .hero__foto img { object-position: 60% 40%; }
+}
+/* celular: os selos em lista, um por linha, como no mockup */
+@media (max-width: 39.99em) {
+  /* "CONSTRUÍMOS" tem 8,9 vezes o tamanho da fonte: acompanha a tela pra caber em 320 px */
+  .hero__titulo { font-size: min(40px, calc((100vw - 40px) / 9.1)); }
+  .hero__selos { grid-template-columns: minmax(0, 1fr); gap: 22px; padding-block: 34px 40px; }
+  .selo { gap: 18px; }
+  .selo__i { width: 46px; height: 46px; }
+  .selo__nome { font-size: 15.5px; }
+}

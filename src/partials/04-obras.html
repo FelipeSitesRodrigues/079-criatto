@@ -1,0 +1,25 @@
+    <section class="secao secao--branca obras" id="obras" aria-labelledby="obras-titulo">
+      <div class="container obras__grade">
+        <header class="cab obras__cab" data-revela>
+          <div>
+            <p class="rotulo">Obras entregues</p>
+            <h2 class="titulo" id="obras-titulo">Onde errar <br class="quebra"><span class="destaque">não é uma opção.</span></h2>
+          </div>
+          <p class="apoio">Hospitais, laboratórios e empresas que confiaram a obra à nossa equipe. É esse padrão que vai pra sua casa.</p>
+        </header>
+
+        <div class="obras__filtros" role="group" aria-label="Filtrar obras por tipo" data-revela>
+          <!-- @obras-filtros -->
+        </div>
+        <button class="btn btn--contorno-escuro obras__todas" type="button" aria-expanded="false" aria-controls="obras-lista" data-obras-todas data-revela>Ver todas as obras</button>
+
+        <div class="obras__carrossel" data-obras data-revela>
+          <button class="obras__seta obras__seta--ant" type="button" aria-label="Obras anteriores" aria-controls="obras-lista" data-anterior><i data-i="caret-left" data-w="bold"></i></button>
+          <ul class="obras__trilho" id="obras-lista" role="list" tabindex="0" aria-label="Galeria de obras (use as setas do teclado)">
+            <!-- @obras -->
+          </ul>
+          <button class="obras__seta obras__seta--prox" type="button" aria-label="Próximas obras" aria-controls="obras-lista" data-proximo><i data-i="caret-right" data-w="bold"></i></button>
+        </div>
+        <div class="obras__pontos" data-pontos></div>
+      </div>
+    </section>

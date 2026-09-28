@@ -1,0 +1,65 @@
+/* ---------------------------------------------------------------- desempenho (base do 076, 077 e 078)
+   content-visibility: o navegador só faz layout e pintura de cada seção abaixo do hero
+   quando ela chega perto da tela. No carregamento o trabalho fica no hero, e o LCP (a foto
+   da casa) não espera a página inteira.
+
+   A altura reservada é a do CONTEÚDO: o navegador soma o padding da seção por cima (bug do
+   076). Os números saem do scripts/alturas.mjs (1440, 1100, 800 e 390). Estimativa errada
+   faz a âncora do menu mirar longe; o _base.js desenha tudo no primeiro clique e confere no
+   fim da rolagem. O "auto" faz o navegador guardar a altura de verdade depois da primeira
+   vez. Mudou muito o tamanho de uma seção? Rodar o alturas.mjs e atualizar aqui.
+
+   O trilho da galeria não tem padding lateral (sem scroll-padding, o scroll-snap rolaria o
+   trilho sozinho e o Chrome pararia de medir o LCP: bug do 078).                     */
+.servicos, .sobre, .obras, .antes, .alta, .como, .resultados, .cta, .rodape { content-visibility: auto; }
+/* celular: no primeiro quadro a seção de serviços fica pulada de vez (o script do <head> tira
+   a classe na primeira pintura). Sem isso ela era montada junto com o hero, por estar perto,
+   e as fotos dos cartões terminavam de baixar antes da foto do hero aparecer. */
+@media (max-width: 63.99em) {
+  .js-abrindo .servicos { content-visibility: hidden; }
+}
+/* no primeiro clique numa âncora (_base.js) tudo é desenhado de uma vez */
+.cv-pronto :is(.servicos, .sobre, .obras, .antes, .alta, .como, .resultados, .cta, .rodape) { content-visibility: visible; }
+
+.servicos { contain-intrinsic-size: auto 870px; }
+.sobre { contain-intrinsic-size: auto 731px; }
+.obras { contain-intrinsic-size: auto 509px; }
+.antes { contain-intrinsic-size: auto 498px; }
+.alta { contain-intrinsic-size: auto 342px; }
+.como { contain-intrinsic-size: auto 327px; }
+.resultados { contain-intrinsic-size: auto 150px; }
+.cta { contain-intrinsic-size: auto 274px; }
+.rodape { contain-intrinsic-size: auto 369px; }
+
+@media (max-width: 79.99em) {
+  .servicos { contain-intrinsic-size: auto 864px; }
+  .sobre { contain-intrinsic-size: auto 713px; }
+  .obras { contain-intrinsic-size: auto 482px; }
+  .antes { contain-intrinsic-size: auto 448px; }
+  .alta { contain-intrinsic-size: auto 392px; }
+  .como { contain-intrinsic-size: auto 384px; }
+  .cta { contain-intrinsic-size: auto 323px; }
+  .rodape { contain-intrinsic-size: auto 357px; }
+}
+@media (max-width: 63.99em) {
+  .servicos { contain-intrinsic-size: auto 1527px; }
+  .sobre { contain-intrinsic-size: auto 1184px; }
+  .obras { contain-intrinsic-size: auto 605px; }
+  .antes { contain-intrinsic-size: auto 879px; }
+  .alta { contain-intrinsic-size: auto 696px; }
+  .como { contain-intrinsic-size: auto 936px; }
+  .resultados { contain-intrinsic-size: auto 257px; }
+  .cta { contain-intrinsic-size: auto 599px; }
+  .rodape { contain-intrinsic-size: auto 815px; }
+}
+@media (max-width: 39.99em) {
+  .servicos { contain-intrinsic-size: auto 2867px; }
+  .sobre { contain-intrinsic-size: auto 1190px; }
+  .obras { contain-intrinsic-size: auto 738px; }
+  .antes { contain-intrinsic-size: auto 1531px; }
+  .alta { contain-intrinsic-size: auto 590px; }
+  .como { contain-intrinsic-size: auto 1063px; }
+  .resultados { contain-intrinsic-size: auto 338px; }
+  .cta { contain-intrinsic-size: auto 502px; }
+  .rodape { contain-intrinsic-size: auto 1208px; }
+}

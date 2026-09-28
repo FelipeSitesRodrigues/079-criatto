@@ -1,0 +1,31 @@
+  <header class="topo" id="topo">
+    <div class="container topo__barra">
+      <a class="marca" href="#inicio" aria-label="Criatto Construtora, voltar ao início">
+        <img data-img="logo" data-img-max="320" sizes="(min-width: 64em) 150px, 104px" alt="" class="marca__logo">
+        <span class="marca__nome" aria-hidden="true">Construtora</span>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Principal">
+        <ul class="menu__lista" role="list">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#obras">Obras</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="menu__extra">
+          <a class="btn btn--laranja menu__cta" href="{{wa:orcamento}}" target="_blank" rel="noopener" data-zap="menu-celular"><i data-i="whatsapp-logo" data-w="regular"></i>Pedir orçamento no WhatsApp</a>
+          <a class="menu__fone" href="tel:{{cfg.telefoneLink}}"><i data-i="phone" data-w="light"></i>{{cfg.whatsappExibir}}</a>
+          <p class="menu__rodape">{{cfg.endereco.rua}} · {{cfg.endereco.bairro}}, {{cfg.endereco.cidade}}-{{cfg.endereco.uf}}</p>
+        </div>
+      </nav>
+
+      <a class="topo__fone" href="{{wa:orcamento}}" target="_blank" rel="noopener" data-zap="topo-fone" aria-label="Falar no WhatsApp: {{cfg.whatsappExibir}}"><i data-i="phone" data-w="light"></i><span class="topo__fone-num">{{cfg.whatsappExibir}}</span></a>
+      <a class="btn btn--laranja topo__cta" href="{{wa:orcamento}}" target="_blank" rel="noopener" data-zap="topo">Pedir orçamento</a>
+
+      <button class="topo__menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span class="topo__menu-linhas" aria-hidden="true"><span></span></span>
+      </button>
+    </div>
+  </header>

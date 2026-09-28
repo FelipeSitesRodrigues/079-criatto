@@ -1,0 +1,56 @@
+/* ---------------------------------------------------------------- rodapé (preto)
+   Mockup: logo à esquerda; NAVEGAÇÃO, SERVIÇOS e CONTATO em colunas separadas por fios
+   verticais; contato com ícones laranja; embaixo, o © à esquerda e os ícones à direita.
+   Só WhatsApp e e-mail nos ícones: a Criatto não tem Instagram nem Facebook (o mockup
+   desenhava os três).                                                                */
+.rodape { padding-top: clamp(48px, 5vw, 76px); background: var(--preto); color: rgb(255 255 255 / .7); font-size: 14.5px; }
+.rodape__grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr) minmax(0, 1.25fr) minmax(0, 1.35fr); }
+.rodape__marca { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; padding-right: 32px; }
+.marca--rodape { align-items: center; }
+.marca--rodape .marca__logo { width: 168px; }
+.marca--rodape .marca__nome { font-size: 10.5px; margin-top: 4px; }
+.rodape__frase { color: rgb(255 255 255 / .6); font-size: 14px; }
+.rodape__col { padding-inline: clamp(20px, 2.6vw, 40px); border-left: 1px solid var(--fio-escuro); }
+.rodape__h { margin-bottom: 16px; color: var(--branco); font: 700 14.5px/1 var(--fonte-util); font-stretch: 106%; letter-spacing: .05em; text-transform: uppercase; }
+.rodape__col ul { display: grid; gap: 10px; }
+.rodape__col a { display: inline-flex; align-items: flex-start; gap: 12px; transition: color .25s ease, transform .35s var(--ease-out); }
+@media (hover: hover) {
+  .rodape__col a:hover { color: var(--branco); transform: translateX(2px); }
+}
+.rodape__contato li { display: flex; align-items: flex-start; gap: 12px; line-height: 1.45; }
+.rodape__contato .i { width: 22px; height: 22px; margin-top: -1px; color: var(--laranja); }
+.rodape__contato a { color: rgb(255 255 255 / .86); font-weight: 600; }
+
+.rodape__base {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 32px;
+  margin-top: clamp(40px, 4vw, 56px);
+  padding-block: 22px max(26px, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--fio-escuro);
+  font-size: 13.5px;
+}
+.rodape__copy { flex: 1 1 420px; }
+.rodape__cnpj { display: block; margin-top: 3px; color: rgb(255 255 255 / .45); font-size: 12.5px; }
+.rodape__credito a { color: rgb(255 255 255 / .86); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgb(244 102 28 / .7); }
+.rodape__redes { display: flex; gap: 10px; }
+.rodape__redes a { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid rgb(255 255 255 / .2); border-radius: 50%; color: var(--branco); transition: background-color .3s ease, color .3s ease, border-color .3s ease, transform .35s var(--ease-out); }
+.rodape__redes .i { width: 21px; height: 21px; }
+@media (hover: hover) {
+  .rodape__redes a:hover { border-color: var(--laranja); background: var(--laranja); color: var(--preto); transform: translateY(-2px); }
+}
+
+@media (max-width: 63.99em) {
+  .rodape__grade { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
+  .rodape__marca { grid-column: 1 / -1; align-items: center; padding-right: 0; text-align: center; }
+  .rodape__col:nth-child(2) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 39.99em) {
+  .rodape__grade { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+  .rodape__col, .rodape__col:nth-child(2) { padding: 26px 0; border-left: 0; border-top: 1px solid var(--fio-escuro); }
+  .rodape__marca { padding-bottom: 30px; }
+  .rodape__base { flex-direction: column; align-items: flex-start; }
+  .rodape__copy { flex: none; }
+}

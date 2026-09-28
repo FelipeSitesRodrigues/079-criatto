@@ -1,0 +1,33 @@
+{
+  "_leia": "Os 4 comparadores de 'Transformações que valorizam', na ordem do mockup. As imagens são da pasta ANTES X DEPOIS do Felipe, todas geradas (ilustrativas): a seção leva a legenda 'Imagens ilustrativas do serviço'. O terceiro par é a obra comercial (o 'depois' é o prédio da Porto Seguro de Brasília redesenhado); o mockup chamava esse card de 'Condomínio de luxo', mas a imagem é de prédio comercial e o arquivo se chama OBRA COMERCIAL, então vale o nome do arquivo. Antes e depois de cada par saem no mesmo recorte 16:9, pra linha do comparador cruzar a mesma cena.",
+  "itens": [
+    {
+      "id": "apartamento",
+      "titulo": "Reforma de apartamento",
+      "texto": "Do contrapiso cru à sala integrada, pronta pra morar.",
+      "antes": { "arquivo": "ANTES X DEPOIS/REFORMA DE APARTAMENTO - ANTES.png", "alt": "Apartamento antes da reforma: laje e paredes no reboco, piso cru" },
+      "depois": { "arquivo": "ANTES X DEPOIS/REFORMA DE APARTAMENTO - DEPOIS.png", "alt": "O mesmo apartamento depois da reforma: sala e cozinha integradas, piso claro e luz embutida" }
+    },
+    {
+      "id": "terreno",
+      "titulo": "Construção de um terreno",
+      "texto": "Do lote vazio à casa pronta, com a obra acompanhada do começo ao fim.",
+      "antes": { "arquivo": "ANTES X DEPOIS/CONSTRUÇÃO DE UM TERRENO - ANTES.png", "alt": "Lote vazio em condomínio, com terra e mato" },
+      "depois": { "arquivo": "ANTES X DEPOIS/CONSTRUÇÃO DE UM TERRENO - DEPOIS.png", "alt": "Casa de dois pavimentos construída no lote, com fachada em pedra e madeira" }
+    },
+    {
+      "id": "comercial",
+      "titulo": "Obra comercial",
+      "texto": "Do terreno limpo ao prédio pronto pra operar.",
+      "antes": { "arquivo": "ANTES X DEPOIS/OBRA COMERCIAL - ANTES.png", "alt": "Terreno limpo, antes da obra do prédio comercial" },
+      "depois": { "arquivo": "ANTES X DEPOIS/OBRA COMERCIAL - DEPOIS.png", "alt": "Prédio comercial pronto, com fachada branca e esquadrias de vidro" }
+    },
+    {
+      "id": "gourmet",
+      "titulo": "Reforma de área gourmet",
+      "texto": "Da área sem acabamento ao espaço pronto pra receber.",
+      "antes": { "arquivo": "ANTES X DEPOIS/AREA GOURMET - ANTES.png", "alt": "Área externa sem acabamento, com churrasqueira no reboco, ao lado da piscina" },
+      "depois": { "arquivo": "ANTES X DEPOIS/AREA GOURMET - DEPOIS.png", "alt": "A mesma área transformada em espaço gourmet, com bancada, forro de madeira e luz" }
+    }
+  ]
+}

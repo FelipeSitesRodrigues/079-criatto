@@ -1,0 +1,71 @@
+/* ---------------------------------------------------------------- como funciona (laranja)
+   Mockup: faixa laranja com a grade técnica. Rótulo em branco, título em preto com a
+   segunda linha em branco, apoio à direita. Os 5 passos em linha: círculo preto com o
+   número, seta branca fina até o próximo (como uma cota de desenho técnico), nome em caixa
+   alta e uma linha. As setas se desenham em sequência quando a faixa aparece.
+   Celular (mockup mobile): passos na vertical, número à esquerda com a seta descendo,
+   ícone de linha preto em cima do nome, divisória fina entre um passo e outro.      */
+.passos { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 8px; }
+.passo { position: relative; display: grid; justify-items: center; align-content: start; padding-inline: 10px; text-align: center; }
+.passo__n {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--preto);
+  color: var(--branco);
+  font: 800 17px/1 var(--fonte-titulo);
+  font-stretch: 110%;
+  box-shadow: 0 0 0 6px rgb(255 255 255 / .14);
+}
+.passo__i { display: none; }
+.passo__nome { margin-top: 20px; color: var(--preto); font: 800 15px/1.2 var(--fonte-titulo); font-stretch: 106%; letter-spacing: .015em; text-transform: uppercase; }
+.passo__desc { max-width: 16.5em; margin-top: 8px; color: rgb(11 11 11 / .82); font-size: 14.5px; line-height: 1.5; }
+/* seta até o próximo: linha (::after) e ponta (::before) */
+.passo:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: calc(50% + 38px);
+  right: calc(-50% + 38px);
+  height: 2px;
+  background: rgb(255 255 255 / .9);
+  transform-origin: 0 50%;
+}
+.passo:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: calc(-50% + 39px);
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid rgb(255 255 255 / .9);
+  border-right: 2px solid rgb(255 255 255 / .9);
+  transform: rotate(45deg);
+}
+@keyframes seta-risca { from { transform: scaleX(0); } }
+@keyframes seta-risca-y { from { transform: scaleY(0); } }
+@keyframes ponta-aparece { from { opacity: 0; } }
+@media (prefers-reduced-motion: no-preference) {
+  .js .passos:not(.visivel) .passo::after, .js .passos:not(.visivel) .passo::before { opacity: 0; }
+  .js .passos.visivel .passo::after { animation: seta-risca .7s var(--ease-out) calc(var(--i, 0) * 140ms + 300ms) backwards; }
+  .js .passos.visivel .passo::before { animation: ponta-aparece .3s ease calc(var(--i, 0) * 140ms + 850ms) backwards; }
+}
+
+@media (max-width: 63.99em) {
+  .passos { grid-template-columns: minmax(0, 1fr); margin-top: 0; }
+  .passo { grid-template-columns: 46px minmax(0, 1fr); column-gap: 20px; justify-items: start; padding: 0; text-align: left; }
+  .passo__n { grid-row: 1 / span 3; }
+  .passo__i { display: block; grid-column: 2; width: 40px; height: 40px; color: var(--preto); }
+  .passo__nome { grid-column: 2; margin-top: 12px; }
+  .passo__desc { grid-column: 2; max-width: none; padding-bottom: 26px; }
+  .passo:not(:last-child) .passo__desc { margin-bottom: 26px; border-bottom: 1px solid rgb(11 11 11 / .16); }
+  .passo:not(:last-child)::after { top: 58px; bottom: 14px; left: 22px; right: auto; width: 2px; height: auto; transform-origin: 50% 0; }
+  .passo:not(:last-child)::before { top: auto; bottom: 14px; right: auto; left: 18px; transform: rotate(135deg); }
+  @media (prefers-reduced-motion: no-preference) {
+    .js .passos.visivel .passo::after { animation-name: seta-risca-y; }
+  }
+}

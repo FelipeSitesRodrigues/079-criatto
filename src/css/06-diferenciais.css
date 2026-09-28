@@ -1,0 +1,50 @@
+/* ---------------------------------------------------------------- obras de alta complexidade (preto)
+   Mockup: faixa preta compacta. À esquerda o rótulo laranja sublinhado ("OBRAS DE ALTA
+   COMPLEXIDADE."), o título com o começo em laranja, o texto sobre o Hospital Santa Luzia
+   e o botão laranja com a seta em círculo; à direita a foto grande (a tomografia real do
+   hospital). Celular: texto, foto e o botão por último (mockup mobile).              */
+.alta { background: #000; }
+.alta__grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: clamp(40px, 5vw, 80px); align-items: center; }
+.alta__rotulo {
+  display: inline-block;
+  padding-bottom: 7px;
+  border-bottom: 2px solid var(--laranja);
+  color: var(--laranja);
+  font: 500 clamp(17px, .9rem + .5vw, 23px)/1.2 var(--fonte-util);
+  font-stretch: 104%;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.alta__titulo {
+  margin-top: 18px;
+  color: var(--branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-stretch: var(--largura-titulo);
+  font-size: clamp(26px, .9rem + 1.7vw, 38px);
+  line-height: 1.06;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.alta__titulo .destaque { color: var(--laranja); }
+.alta__desc { max-width: 36em; margin-top: 18px; color: var(--claro-2); font-size: 16.5px; line-height: 1.62; }
+.alta__btn { margin-top: 28px; }
+.alta__btn .i { width: 26px; height: 26px; }
+.alta__foto { overflow: hidden; border-radius: var(--raio-card); aspect-ratio: 2; background: var(--grafite); box-shadow: 0 30px 60px -40px rgb(0 0 0 / .9); }
+.alta__foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease-out); }
+@media (hover: hover) {
+  .alta__foto:hover img { transform: scale(1.03); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .alta__texto.visivel .alta__rotulo { background: linear-gradient(var(--laranja), var(--laranja)) 0 100% / 100% 2px no-repeat; border-bottom-color: transparent; animation: risca-rotulo 1s var(--ease-out) .3s backwards; }
+}
+@keyframes risca-rotulo { from { background-size: 0 2px; } }
+
+@media (max-width: 63.99em) {
+  .alta__grade { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  /* o botão desce pra depois da foto */
+  .alta__texto { display: contents; }
+  .alta__rotulo { justify-self: start; }
+  .alta__foto { order: 5; margin-top: 30px; }
+  .alta__btn { order: 6; justify-self: stretch; margin-top: 22px; }
+}

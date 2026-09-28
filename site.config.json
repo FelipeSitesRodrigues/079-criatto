@@ -1,0 +1,42 @@
+{
+  "dominio": "",
+  "nome": "Criatto Construtora",
+  "razaoSocial": "Criatto Engenharia e Construções Ltda",
+  "cnpj": "12.105.323/0001-29",
+  "fundacao": "2010-06-18",
+  "dono": "Usley Sardinha",
+  "whatsapp": "5562999597778",
+  "whatsappExibir": "(62) 99959-7778",
+  "telefone": "+55 62 99959-7778",
+  "telefoneLink": "+5562999597778",
+  "email": "criattoengenharia@gmail.com",
+  "endereco": {
+    "rua": "Av. Circular, 1192",
+    "complemento": "Sala 11, Cond. Shopping 1000",
+    "ruaSchema": "Avenida Circular, 1192, Quadra 26, Lote 06-E, Sala 11, Condomínio Shopping 1000",
+    "bairro": "Setor Pedro Ludovico",
+    "cidade": "Goiânia",
+    "uf": "GO",
+    "cep": "74823-020"
+  },
+  "horarioExibir": "Segunda a sexta, das 8h às 18h",
+  "horarioSchema": [
+    "Mo-Fr 08:00-18:00"
+  ],
+  "credito": "https://www.instagram.com/credialta.sites/",
+  "mensagens": {
+    "orcamento": "Olá! Vim pelo site da Criatto e gostaria de um orçamento para a minha obra.",
+    "conversar": "Olá! Vim pelo site da Criatto e gostaria de conversar sobre uma obra.",
+    "reforma": "Olá! Vim pelo site da Criatto e gostaria de um orçamento para *reforma*.",
+    "servico": "Olá! Vim pelo site da Criatto e gostaria de um orçamento para *{servico}*."
+  },
+  "pendencias": [
+    "WhatsApp (62) 99959-7778: veio do site antigo; confirmar com o Usley antes de publicar",
+    "e-mail criattoengenharia@gmail.com e endereço (Av. Circular, 1192, Sala 11): vieram do CNPJ; confirmar se o escritório recebe cliente",
+    "domínio: o site novo vai no criattoconstrutora.com.br (hoje WordPress)? Preencher dominio no site.config.json (canonical, sitemap, og:image absoluto)",
+    "fotos de casa e reforma: são geradas (ilustrativas). Trocar pelas reais quando o Usley mandar (src/dados/obras.json e servicos.json)",
+    "Projetos personalizados e Consultoria e planejamento: entraram pelo mockup, não pela copy; confirmar com o Usley que a Criatto faz projeto",
+    "depoimentos: a seção Resultados mostra os clientes (logos) até existir avaliação real; não publicar depoimento inventado",
+    "Instagram: não existe; o rodapé mostra só WhatsApp e e-mail"
+  ]
+}

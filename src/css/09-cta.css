@@ -1,0 +1,58 @@
+/* ---------------------------------------------------------------- CTA final (laranja)
+   Mockup: faixa laranja com a grade técnica. À esquerda o desenho da casa em traço preto,
+   apoiado no pé da faixa e saindo pela borda esquerda; à direita "VAMOS TIRAR" em preto e
+   "SEU PROJETO DO PAPEL?" em branco, o texto, o botão preto do WhatsApp e o telefone em
+   branco. Celular: o desenho em cima, largura toda, e os dois botões empilhados.
+   O desenho se desenha sozinho quando a faixa aparece (09-cta.js): o SVG vetorizado do
+   desenho do Felipe (scripts/vetorizar-desenho.mjs) é uma máscara de traços que cresce de
+   baixo pra cima e vai revelando o PNG original, linha por linha, como caneta técnica.
+   Sem JS ou com menos movimento, fica o PNG parado, inteiro.                         */
+.cta { --cta-y: clamp(48px, 4.4vw, 68px); padding-block: var(--cta-y); overflow: clip; }
+.cta__grade { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(28px, 3.4vw, 56px); align-items: center; }
+.cta__desenho {
+  align-self: end;
+  margin-left: calc(var(--margem) * -.8);
+  margin-top: calc(var(--cta-y) * -.55);
+  margin-bottom: calc(var(--cta-y) * -1 + 2px);
+  color: var(--preto);
+}
+.cta__desenho-img, .cta__desenho .desenho { display: block; width: 100%; height: auto; opacity: .92; }
+/* com JS, o PNG só aparece se o desenho animado não carregar (09-cta.js marca) */
+@media (prefers-reduced-motion: no-preference) {
+  .js .cta__desenho:not(.desenho--falhou) .cta__desenho-img { visibility: hidden; }
+}
+.desenho__faixa { stroke-dashoffset: calc(var(--l) * 1px); }
+.desenho__fim { opacity: 0; }
+.desenho--anima .desenho__faixa { animation: traca 1.2s cubic-bezier(.55, .08, .32, 1) calc(var(--i, 0) * 125ms) forwards; }
+.desenho--anima .desenho__fim { animation: fim-desenho .8s ease 3s forwards; }
+@keyframes traca { to { stroke-dashoffset: 0; } }
+@keyframes fim-desenho { to { opacity: 1; } }
+
+.cta__titulo {
+  color: var(--preto);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-stretch: var(--largura-titulo);
+  font-size: clamp(30px, 1rem + 1.4vw, 37px);
+  line-height: 1.02;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.cta__titulo .destaque { display: block; color: var(--branco); }
+.cta__desc { max-width: 31em; margin-top: 16px; color: rgb(11 11 11 / .88); font-size: 17px; line-height: 1.55; }
+.cta__acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 34px; margin-top: 28px; }
+.cta__btn { min-height: 60px; padding-inline: 26px 30px; }
+.cta__btn .i { width: 26px; height: 26px; }
+.cta__fone { display: inline-flex; align-items: center; gap: 12px; color: var(--branco); font: 700 clamp(18px, 1rem + .4vw, 22px)/1 var(--fonte-util); font-stretch: 104%; letter-spacing: .01em; }
+.cta__fone .i { width: 28px; height: 28px; transition: transform .4s var(--ease-out); }
+@media (hover: hover) {
+  .cta__fone:hover .i { transform: rotate(-12deg) scale(1.08); }
+}
+
+@media (max-width: 63.99em) {
+  .cta__grade { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .cta__desenho { order: -1; align-self: auto; margin: calc(var(--cta-y) * -.35) calc(var(--margem) * -1) 0; }
+  .cta__acoes { display: grid; gap: 14px; }
+  .cta__btn { width: 100%; }
+  .cta__fone { justify-content: center; min-height: 58px; border: 1.5px solid rgb(255 255 255 / .8); border-radius: var(--raio); }
+}

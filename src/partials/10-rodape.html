@@ -1,0 +1,45 @@
+  <footer class="rodape" id="rodape">
+    <div class="container rodape__grade">
+      <div class="rodape__marca">
+        <a class="marca marca--rodape" href="#inicio" aria-label="Criatto Construtora, voltar ao início">
+          <img data-img="logo" data-img-max="320" sizes="170px" alt="" class="marca__logo" loading="lazy" decoding="async">
+          <span class="marca__nome" aria-hidden="true">Construtora</span>
+        </a>
+        <p class="rodape__frase">Construtora em Goiânia desde 2010.</p>
+      </div>
+      <nav class="rodape__col" aria-labelledby="rodape-nav">
+        <p class="rodape__h" id="rodape-nav">Navegação</p>
+        <ul role="list">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#obras">Obras</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="rodape__col">
+        <p class="rodape__h">Serviços</p>
+        <ul role="list">
+              <!-- @servicos-rodape -->
+        </ul>
+      </div>
+      <div class="rodape__col rodape__contato">
+        <p class="rodape__h">Contato</p>
+        <ul role="list">
+          <li><a href="{{wa:orcamento}}" target="_blank" rel="noopener" data-zap="rodape"><i data-i="whatsapp-logo" data-w="light"></i><span>{{cfg.whatsappExibir}}</span></a></li>
+          <li><i data-i="map-pin" data-w="light"></i><span>{{cfg.endereco.rua}}, {{cfg.endereco.complemento}}<br>{{cfg.endereco.bairro}}, {{cfg.endereco.cidade}}-{{cfg.endereco.uf}}</span></li>
+          <li><i data-i="clock" data-w="light"></i><span>{{cfg.horarioExibir}}</span></li>
+          <li><a href="mailto:{{cfg.email}}"><i data-i="envelope-simple" data-w="light"></i><span>{{cfg.email}}</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container rodape__base">
+      <p class="rodape__copy">© {{ano}} {{cfg.nome}}. Todos os direitos reservados. <span class="rodape__cnpj">{{cfg.razaoSocial}} · CNPJ {{cfg.cnpj}}</span></p>
+      <p class="rodape__credito">Site por <a href="{{cfg.credito}}" target="_blank" rel="noopener">Credialta Sites</a></p>
+      <div class="rodape__redes">
+        <a href="{{wa:orcamento}}" target="_blank" rel="noopener" data-zap="rodape-icone" aria-label="WhatsApp da Criatto"><i data-i="whatsapp-logo" data-w="regular"></i></a>
+        <a href="mailto:{{cfg.email}}" aria-label="E-mail da Criatto"><i data-i="envelope-simple" data-w="regular"></i></a>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,114 @@
+/* ---------------------------------------------------------------- antes e depois (concreto)
+   Mockup: 4 cartões brancos lado a lado. Em cada um, o comparador (ANTES em pílula
+   grafite à esquerda, DEPOIS em pílula laranja à direita, a alça redonda laranja no meio)
+   e embaixo o nome e uma linha de texto. Base do comparador: 078 (as duas fotos
+   empilhadas, o "depois" recortado a partir de --pos, e um <input type=range> invisível
+   por cima de tudo, que dá mouse, toque e teclado).                                  */
+.comps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.comp-card { min-width: 0; }
+.comp {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--fio-claro);
+  border-radius: var(--raio-card);
+  background: var(--branco);
+  box-shadow: 0 1px 2px rgb(11 11 11 / .05), 0 22px 40px -30px rgb(11 11 11 / .45);
+  transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out);
+}
+@media (hover: hover) {
+  .comp:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgb(11 11 11 / .06), 0 30px 48px -30px rgb(11 11 11 / .5); }
+}
+.comp__palco { position: relative; overflow: hidden; aspect-ratio: 1.64; background: var(--grafite); isolation: isolate; }
+.comp__foto { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
+.comp__foto img { width: 100%; height: 100%; object-fit: cover; }
+.comp__foto--depois { clip-path: inset(0 0 0 var(--pos, 50%)); }
+.comp__linha {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: var(--pos, 50%);
+  width: 2px;
+  margin-left: -1px;
+  background: rgb(255 255 255 / .92);
+  box-shadow: 0 0 12px rgb(0 0 0 / .4);
+  pointer-events: none;
+}
+.comp__alca {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--branco);
+  border-radius: 50%;
+  background: var(--laranja);
+  color: var(--preto);
+  box-shadow: 0 6px 18px -4px rgb(0 0 0 / .55);
+  transform: translate(-50%, -50%);
+  transition: transform .3s var(--ease-out), box-shadow .3s ease;
+}
+.comp__alca .i { width: 12px; height: 12px; margin: 0 -1px; }
+.comp__tag {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  font: 700 11px/1 var(--fonte-util);
+  font-stretch: 106%;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.comp__tag--antes { left: 10px; background: rgb(40 40 40 / .88); color: var(--branco); }
+.comp__tag--depois { right: 10px; background: var(--laranja); color: var(--preto); }
+/* o range cobre o palco inteiro: arrastar em qualquer ponto move a linha */
+.comp__faixa {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: pan-y;
+}
+.comp__palco:has(.comp__faixa:focus-visible) { outline: 2px solid var(--laranja-tinta); outline-offset: -2px; }
+@media (hover: hover) {
+  .comp__palco:hover .comp__alca { transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 8px 22px -4px rgb(244 102 28 / .8); }
+}
+.comp--arrastando .comp__alca { transform: translate(-50%, -50%) scale(1.14); }
+/* suaviza só quando a linha pula (clique ou teclado); no arrasto ela segue o dedo */
+.comp--pulando .comp__foto--depois { transition: clip-path .45s var(--ease-out); }
+.comp--pulando .comp__linha { transition: left .45s var(--ease-out); }
+/* convite: quando o cartão aparece, a linha balança uma vez pra mostrar que dá pra arrastar */
+@keyframes comp-convite { 0%, 100% { transform: translateX(0); } 35% { transform: translateX(-14px); } 70% { transform: translateX(10px); } }
+@media (prefers-reduced-motion: no-preference) {
+  .comps.visivel .comp__alca { animation: comp-convite 1.1s var(--ease-in-out) calc(var(--i, 0) * 120ms + .6s) 1 backwards; }
+}
+
+.comp__texto { display: grid; gap: 5px; padding: 16px 18px 20px; }
+.comp__nome { color: var(--preto); font-size: 15.5px; font-weight: 700; line-height: 1.3; }
+.comp__desc { color: var(--texto-2); font-size: 14px; line-height: 1.5; }
+.antes__nota { margin-top: 18px; color: var(--texto-2); font-size: 13px; }
+
+@media (max-width: 79.99em) {
+  .comps { gap: 16px; }
+  .comp__texto { padding: 14px 14px 18px; }
+}
+@media (max-width: 63.99em) {
+  .comps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+}
+@media (max-width: 39.99em) {
+  .comps { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .comp__alca { width: 44px; height: 44px; }
+}

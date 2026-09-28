@@ -1,0 +1,150 @@
+{
+  "_leia": "Galeria 'Nossas obras', na ordem do filtro TODOS. categoria = residencial, corporativo, hospitalar ou comercial (os filtros do mockup). Todas as fotos são de obras reais da equipe, conferidas nas legendas do portfólio do site antigo, menos a casa, que é imagem gerada (ia: true): ela entra marcada como ilustrativa, sem nome de condomínio nem cidade, porque não existe foto real de residencial ainda (o Usley não tem acesso fácil às fotos das reformas). Cidade só aparece quando é da região (Goiânia) ou Brasília (hospital e laboratórios). recorte = [x, y, largura, altura] relativos, aplicado antes do 3:2; neutralizar = força da correção de balanço de branco (as fotos do hospital vieram alaranjadas).",
+  "itens": [
+    {
+      "id": "casa-alto-padrao",
+      "titulo": "Casa de alto padrão",
+      "local": "Imagem ilustrativa",
+      "categoria": "residencial",
+      "ia": true,
+      "arquivo": "CASA ALPHAVILLE GOIANIA.png",
+      "alt": "Casa de dois pavimentos com piscina, fachada em pedra, madeira e vidro (imagem ilustrativa)"
+    },
+    {
+      "id": "santa-luzia",
+      "titulo": "Hospital Santa Luzia",
+      "local": "Rede D’Or · Brasília-DF",
+      "categoria": "hospitalar",
+      "arquivo": "IMAGENS SERVIÇOS/WhatsApp Image 2026-09-24 at 16.18.06 (1).jpeg",
+      "focoY": 0.42,
+      "alt": "Fachada e marquise de entrada do Hospital Santa Luzia, da Rede D’Or, em Brasília"
+    },
+    {
+      "id": "polo-empresarial",
+      "titulo": "Polo Empresarial",
+      "local": "Escritório corporativo · Goiânia-GO",
+      "categoria": "corporativo",
+      "arquivo": "IMAGENS SERVIÇOS/WhatsApp Image 2026-09-24 at 16.18.06.jpeg",
+      "focoY": 0.55,
+      "alt": "Escritório corporativo do Polo Empresarial, em Goiânia, com estações de trabalho e forro com LED"
+    },
+    {
+      "id": "itau-fachada",
+      "titulo": "Agência Itaú",
+      "local": "Fachada iluminada",
+      "categoria": "comercial",
+      "arquivo": "IMAGENS SERVIÇOS/WhatsApp Image 2026-09-24 at 16.18.06 (2).jpeg",
+      "focoY": 0.5,
+      "alt": "Fachada de agência Itaú à noite, com painel laranja perfurado e iluminação embutida"
+    },
+    {
+      "id": "uti-adulto",
+      "titulo": "UTI adulto",
+      "local": "Obra hospitalar · Brasília-DF",
+      "categoria": "hospitalar",
+      "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/obras hospitalares/UTI ADULTO 2.JPG",
+      "focoY": 0.55,
+      "neutralizar": 0.55,
+      "alt": "Leitos de UTI adulto com divisórias de vidro, obra hospitalar da equipe Criatto"
+    },
+    {
+      "id": "oncologia-star",
+      "titulo": "Oncologia Star",
+      "local": "Hospital do Coração · Brasília-DF",
+      "categoria": "hospitalar",
+      "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/obras hospitalares/ONCOLOGIA STAR/DSC_7056.JPG",
+      "focoY": 0.55,
+      "neutralizar": 0.6,
+      "alt": "Recepção da Oncologia Star do Hospital do Coração, em Brasília"
+    },
+    {
+      "id": "porto-seguro",
+      "titulo": "Porto Seguro",
+      "local": "Brasília-DF",
+      "categoria": "corporativo",
+      "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/obras comerciais/PORTO SEGURO BRASÍLIA - DF.jpg",
+      "focoY": 0.5,
+      "alt": "Prédio da Porto Seguro em Brasília, com fachada branca e grandes esquadrias de vidro"
+    },
+    {
+      "id": "centro-obstetrico",
+      "titulo": "Centro obstétrico",
+      "local": "Hospital Santa Luzia · Brasília-DF",
+      "categoria": "hospitalar",
+      "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/obras hospitalares/CENTRO OBSTETRICO.JPG",
+      "focoY": 0.5,
+      "neutralizar": 0.3,
+      "alt": "Centro obstétrico do Hospital Santa Luzia, com berços aquecidos e painéis de gases"
+    },
+    {
+      "id": "itau-goiania",
+      "titulo": "Agência Itaú",
+      "local": "Goiânia-GO",
+      "categoria": "comercial",
+      "arquivo": "SITE ANTIGO/portfolio/2.png",
+      "recorte": [
+        0,
+        0,
+        0.94,
+        0.8
+      ],
+      "focoY": 0.45,
+      "alt": "Fachada de agência Itaú em Goiânia, com painel laranja perfurado e porta em arco"
+    },
+    {
+      "id": "lab-exame",
+      "titulo": "Laboratório Exame",
+      "local": "DASA · Brasília-DF",
+      "categoria": "hospitalar",
+      "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/obras comerciais/Laboratório Exame - DF.JPG",
+      "focoY": 0.5,
+      "alt": "Fachada de vidro do Laboratório Exame, da DASA, em Brasília"
+    },
+    {
+      "id": "norte-energia",
+      "titulo": "Norte Energia",
+      "local": "Quadra de escola",
+      "categoria": "corporativo",
+      "arquivo": "IMAGENS SERVIÇOS/WhatsApp Image 2026-09-24 at 16.18.05.jpeg",
+      "focoY": 0.6,
+      "alt": "Quadra poliesportiva coberta de escola, construída para a Norte Energia"
+    },
+    {
+      "id": "uti-neonatal",
+      "titulo": "UTI neonatal",
+      "local": "Hospital Santa Luzia · Brasília-DF",
+      "categoria": "hospitalar",
+      "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/obras hospitalares/UTI NEONATAL.JPG",
+      "focoY": 0.5,
+      "neutralizar": 0.3,
+      "alt": "UTI neonatal do Hospital Santa Luzia, com incubadoras e monitores"
+    },
+    {
+      "id": "itau-shopping",
+      "titulo": "Agência Itaú",
+      "local": "Loja em shopping",
+      "categoria": "comercial",
+      "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/agencias bancarias folder/Itau Iguatemi Fortaleza - ce.jpg",
+      "focoY": 0.5,
+      "alt": "Agência Itaú em shopping, com vitrine de vidro e fachada laranja"
+    },
+    {
+      "id": "lab-pasteur",
+      "titulo": "Laboratório Pasteur",
+      "local": "DASA · Brasília-DF",
+      "categoria": "hospitalar",
+      "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/obras comerciais/Laboratório Pasteur - DF.JPG",
+      "focoY": 0.5,
+      "alt": "Fachada do Laboratório Pasteur, da DASA, em Brasília"
+    },
+    {
+      "id": "itau-atendimento",
+      "titulo": "Agência Itaú",
+      "local": "Área de atendimento",
+      "categoria": "comercial",
+      "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/agencias bancarias folder/itau cabo de santo agostinho - pe.jpeg",
+      "focoY": 0.55,
+      "alt": "Área de autoatendimento de agência Itaú, com poltronas e tapete redondo"
+    }
+  ]
+}

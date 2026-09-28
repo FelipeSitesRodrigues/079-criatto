@@ -1,0 +1,144 @@
+/* ---------------------------------------------------------------- obras (branco)
+   Mockup: título à esquerda e o texto de apoio à direita; na linha de baixo os filtros
+   (TODOS aceso em laranja, os outros em cinza) e o "VER TODAS AS OBRAS" de contorno; depois
+   a galeria em carrossel, 4 fotos por vez com as setas pretas saindo pelas laterais.
+   O trilho é scroll-snap nativo (dedo, roda e teclado já funcionam); o 04-obras.js só põe
+   filtro, setas, pontos (celular) e o modo "ver todas" (vira grade, 4 por linha).
+   Celular: filtros em duas colunas, um cartão por vez com a ponta do próximo aparecendo,
+   setas por cima da foto, pontos embaixo e o botão largura total no fim (mockup mobile). */
+.obras__grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'cab cab'
+    'filtros todas'
+    'carrossel carrossel'
+    'pontos pontos';
+  column-gap: 24px;
+}
+.obras__cab { grid-area: cab; }
+.obras__filtros { grid-area: filtros; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.obras__todas { grid-area: todas; align-self: center; min-height: 50px; padding-inline: 28px; }
+.obras__carrossel { grid-area: carrossel; position: relative; margin-top: 30px; }
+.obras__pontos { grid-area: pontos; }
+
+.filtro {
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: var(--raio);
+  background: #EEEBE7;
+  color: #4A4A4A;
+  font: 600 13.5px/1 var(--fonte-util);
+  font-stretch: 104%;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  transition: background-color .3s ease, color .3s ease, transform .3s var(--ease-out), box-shadow .3s ease;
+}
+.filtro[aria-pressed='true'] { background: var(--laranja); color: var(--preto); box-shadow: 0 10px 22px -14px rgb(244 102 28 / .9); }
+@media (hover: hover) {
+  .filtro:not([aria-pressed='true']):hover { background: #E4E0DA; color: var(--preto); }
+}
+.filtro:active { transform: scale(.97); }
+
+.obras__trilho {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 3 * 24px) / 4);
+  gap: 24px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0;
+  scrollbar-width: none;
+}
+.obras__trilho::-webkit-scrollbar { display: none; }
+.obras__trilho:focus-visible { outline: 2px solid var(--laranja-tinta); outline-offset: 6px; }
+.obra { scroll-snap-align: start; min-width: 0; }
+.obra[hidden] { display: none; }
+.obra__foto { position: relative; display: block; overflow: hidden; border-radius: var(--raio-card); aspect-ratio: 1.47; background: #DAD5CD; }
+.obra__foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease-out); }
+.obra__selo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 9px;
+  border-radius: 2px;
+  background: rgb(11 11 11 / .72);
+  color: var(--branco);
+  font: 600 10.5px/1 var(--fonte-util);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.obra figcaption { display: grid; gap: 3px; margin-top: 12px; }
+.obra__nome { color: var(--preto); font-size: 15.5px; font-weight: 700; line-height: 1.3; }
+.obra__local { color: var(--texto-2); font-size: 13.5px; line-height: 1.35; }
+@media (hover: hover) {
+  .obra:hover .obra__foto img { transform: scale(1.045); }
+}
+/* troca de filtro: os cartões entram de novo, em sequência curta */
+@keyframes obra-entra { from { opacity: 0; transform: translateY(12px); } }
+@media (prefers-reduced-motion: no-preference) {
+  .obras--filtrou .obra:not([hidden]) { animation: obra-entra .55s var(--ease-suave) calc(var(--n, 0) * 55ms) backwards; }
+}
+
+.obras__seta {
+  position: absolute;
+  z-index: 2;
+  top: calc((100% - 52px) / 2 - 23px);
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--preto);
+  color: var(--branco);
+  box-shadow: 0 10px 24px -12px rgb(0 0 0 / .8);
+  transition: transform .3s var(--ease-out), opacity .3s ease, background-color .3s ease;
+}
+.obras__seta .i { width: 18px; height: 18px; }
+.obras__seta--ant { left: -23px; }
+.obras__seta--prox { right: -23px; }
+.obras__seta:disabled { opacity: .3; cursor: default; }
+@media (hover: hover) {
+  .obras__seta:not(:disabled):hover { background: var(--laranja); color: var(--preto); transform: scale(1.06); }
+}
+.obras__carrossel--sem-setas .obras__seta { display: none; }
+
+/* "ver todas": a galeria vira grade */
+.obras--grade .obras__trilho { grid-auto-flow: row; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-columns: auto; row-gap: 34px; overflow: visible; scroll-snap-type: none; }
+.obras--grade .obras__seta, .obras--grade .obras__pontos { display: none; }
+
+.obras__pontos { display: none; justify-content: center; gap: 8px; margin-top: 20px; }
+.obras__ponto { width: 8px; height: 8px; border-radius: 4px; background: #D6D1CA; transition: width .35s var(--ease-out), background-color .3s ease; }
+.obras__ponto[aria-current='true'] { width: 24px; background: var(--laranja); }
+/* muitas páginas (celular e tablet): uma barra fina no lugar de 15 pontinhos */
+.obras__barra { position: relative; display: block; width: 132px; height: 3px; overflow: hidden; border-radius: 2px; background: #D6D1CA; }
+.obras__barra span { position: absolute; inset: 0 auto 0 0; width: var(--largura, 20%); border-radius: 2px; background: var(--laranja); transform: translateX(var(--desloca, 0%)); transition: transform .15s linear; }
+
+@media (max-width: 79.99em) {
+  .filtro { padding: 0 16px; font-size: 13px; }
+  .obras__seta--ant { left: -14px; }
+  .obras__seta--prox { right: -14px; }
+}
+@media (max-width: 63.99em) {
+  .obras__trilho { grid-auto-columns: calc((100% - 20px) / 2); gap: 20px; }
+  .obras--grade .obras__trilho { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .obras__seta--ant { left: 8px; }
+  .obras__seta--prox { right: 8px; }
+  .obras__pontos { display: flex; }
+}
+@media (max-width: 39.99em) {
+  .obras__grade {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'cab' 'filtros' 'carrossel' 'pontos' 'todas';
+  }
+  .obras__filtros { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .filtro { width: 100%; padding: 0 10px; }
+  .filtro:first-child { grid-column: 1 / -1; }
+  .obras__carrossel { margin-top: 22px; }
+  .obras__trilho { grid-auto-columns: 86%; gap: 14px; }
+  .obras--grade .obras__trilho { grid-template-columns: minmax(0, 1fr); }
+  .obras__seta { top: calc(86% / 1.47 / 2 - 22px); width: 44px; height: 44px; }
+  .obras__seta--prox { right: calc(14% + 22px); }
+  .obras__todas { width: 100%; margin-top: 24px; }
+}

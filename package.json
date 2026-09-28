@@ -1,0 +1,26 @@
+{
+  "name": "079-criatto-construtora",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site da Criatto Construtora, construtora de casas e reformas de alto padrão em Goiânia/GO. HTML, CSS e JS estático, sem dependência em tempo de execução.",
+  "scripts": {
+    "build": "node build.mjs",
+    "publicar": "node build.mjs --publicar",
+    "serve": "node scripts/serve.mjs 3079",
+    "imagens": "node scripts/processar-imagens.mjs",
+    "desenho": "node scripts/vetorizar-desenho.mjs",
+    "fontes": "node scripts/baixar-fontes.mjs",
+    "testar": "node scripts/testar.mjs",
+    "lighthouse": "node scripts/lighthouse.mjs"
+  },
+  "devDependencies": {
+    "@phosphor-icons/core": "^2.1.1",
+    "cheerio": "^1.2.0",
+    "lighthouse": "^12.8.2",
+    "opentype.js": "^1.3.4",
+    "puppeteer-core": "^25.11.0",
+    "sharp": "^0.35.4",
+    "subset-font": "^2.9.0"
+  }
+}

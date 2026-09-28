@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>
+    // js: liga as animações. js-abrindo: no celular a seção de serviços (logo abaixo do hero)
+    // só é montada depois da primeira pintura, pra as fotos dela não disputarem a banda com
+    // a foto do hero (99-desempenho.css). Sai na primeira pintura ou em 2,5 s, o que vier antes.
+    (function () {
+      var h = document.documentElement
+      h.classList.add('js', 'js-abrindo')
+      var pronto = function () { h.classList.remove('js-abrindo') }
+      try {
+        new PerformanceObserver(function (l) { if (l.getEntriesByName('first-contentful-paint').length) pronto() }).observe({ type: 'paint', buffered: true })
+      } catch (e) { pronto() }
+      setTimeout(pronto, 2500)
+    })()
+  </script>
+  <title>Construtora de Alto Padrão em Goiânia | Criatto</title>
+  <meta name="description" content="Construção de casas e reforma de apartamentos de alto padrão em Goiânia. A equipe que entrega obras hospitalares, com prazo e custo sob controle.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0B0B0B">
+  <meta name="format-detection" content="telephone=no">
+  <!-- @meta-dominio -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Criatto Construtora">
+  <meta property="og:title" content="Criatto Construtora | Casas e reformas de alto padrão em Goiânia">
+  <meta property="og:description" content="Construímos UTI. Imagine o cuidado com sua casa. Construção de casas e reforma de apartamentos de alto padrão em Goiânia e região.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Casa de alto padrão iluminada à noite, com o logo da Criatto Construtora">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- @head-parciais -->
+  <!-- @css -->
+  <!-- @schema -->
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <!-- @sprite -->
+
+  <!-- @parcial 00-header -->
+
+  <main id="conteudo">
+    <!-- @parcial 01-hero -->
+    <!-- @parcial 02-servicos -->
+    <!-- @parcial 03-sobre -->
+    <!-- @parcial 04-obras -->
+    <!-- @parcial 05-antes-depois -->
+    <!-- @parcial 06-diferenciais -->
+    <!-- @parcial 07-como-funciona -->
+    <!-- @parcial 08-resultados -->
+    <!-- @parcial 09-cta -->
+  </main>
+
+  <!-- @parcial 10-rodape -->
+
+  <a class="zap-flutuante" href="{{wa:orcamento}}" target="_blank" rel="noopener" data-zap="flutuante" aria-label="Pedir orçamento pelo WhatsApp"><i data-i="whatsapp-logo" data-w="regular"></i></a>
+
+  <!-- @js -->
+</body>
+</html>

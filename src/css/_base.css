@@ -1,0 +1,324 @@
+/* ---------------------------------------------------------------- tokens
+   Paleta do projeto (prompt-mockup.md e memoria.md): preto obra, grafite, laranja Criatto
+   (amostrado do logo), laranja tinta (texto laranja sobre claro, passa contraste), branco,
+   concreto e grafite texto. Nada de outra cor na interface: azul e verde só nas fotos.
+   Cada seção escolhe o fundo com uma classe (.secao--preta, --branca, --concreto,
+   --laranja) e o fundo acerta título, texto, rótulo e destaque pelas variáveis --cor-*.
+   Texto em cima do laranja é sempre preto: branco sobre #F4661C dá 3,1:1.            */
+:root {
+  color-scheme: dark;
+  --preto: #0B0B0B;
+  --grafite: #171717;
+  --laranja: #F4661C;
+  --laranja-tinta: #C2410C;
+  --branco: #FFFFFF;
+  --concreto: #ECE8E2;
+  --texto: #262626;
+  /* tons derivados (do grafite texto e do branco), pra texto secundário e fios */
+  --texto-2: rgb(38 38 38 / .74);
+  --claro-2: rgb(255 255 255 / .74);
+  --fio-claro: #E6E2DB;
+  --fio-escuro: rgb(255 255 255 / .12);
+
+  --fonte-titulo: 'Archivo', 'Archivo Titulo fallback', 'Arial Black', Arial, sans-serif;
+  --fonte-util: 'Archivo', 'Archivo fallback', Arial, sans-serif;
+  --fonte-texto: 'Manrope', 'Manrope fallback', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --largura-titulo: 112%;
+  /* contorno do símbolo do logo, embutido pelo build (scripts/marca-contorno.mjs) */
+  --marca: {{marca-mascara}};
+
+  --container: 1280px;
+  --margem: clamp(20px, 5.6vw, 80px);
+  --secao-y: clamp(56px, 5.4vw, 84px);
+  --altura-topo: 78px;
+  --raio: 3px;
+  --raio-card: 5px;
+
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --ease-suave: cubic-bezier(.16, 1, .3, 1);
+
+  /* contexto (preto é o padrão da página) */
+  --cor-titulo: var(--branco);
+  --cor-texto: var(--claro-2);
+  --cor-forte: var(--branco);
+  --cor-rotulo: rgb(255 255 255 / .82);
+  --cor-destaque: var(--laranja);
+  --cor-marca: var(--laranja);
+  --cor-linha: var(--fio-escuro);
+  --cor-foco: #FF8A4C;
+}
+@media (max-width: 63.99em) {
+  :root { --altura-topo: 68px; }
+}
+
+/* ---------------------------------------------------------------- reset */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--altura-topo);
+  background: var(--preto);
+  scrollbar-color: #3A3A3A var(--preto);
+}
+body {
+  min-height: 100vh;
+  background: var(--preto);
+  color: var(--cor-texto);
+  font: 400 16px/1.6 var(--fonte-texto);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  overflow-x: clip;
+}
+img, picture, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+button { font: inherit; color: inherit; cursor: pointer; background: none; border: 0; padding: 0; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; padding: 0; }
+h1, h2, h3 { font-weight: inherit; font-size: inherit; line-height: inherit; }
+strong { font-weight: 700; }
+figure, blockquote { margin: 0; }
+::selection { background: rgb(244 102 28 / .9); color: var(--preto); }
+:focus-visible { outline: 2px solid var(--cor-foco); outline-offset: 3px; border-radius: 2px; }
+[tabindex='-1']:focus { outline: none; }
+[hidden] { display: none !important; }
+
+.pular {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 200;
+  padding: 13px 18px;
+  border-radius: var(--raio);
+  background: var(--laranja);
+  color: var(--preto);
+  font: 700 12px/1 var(--fonte-util);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transform: translateY(-160%);
+  transition: transform .2s var(--ease-out);
+}
+.pular:focus { transform: none; }
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container { width: min(var(--container), 100% - var(--margem) * 2); margin-inline: auto; }
+.i { width: 24px; height: 24px; flex: none; fill: currentColor; }
+
+/* ---------------------------------------------------------------- fundos das seções */
+.secao { position: relative; padding-block: var(--secao-y); isolation: isolate; }
+.secao--preta {
+  --cor-titulo: var(--branco);
+  --cor-texto: var(--claro-2);
+  --cor-forte: var(--branco);
+  --cor-rotulo: rgb(255 255 255 / .82);
+  --cor-destaque: var(--laranja);
+  --cor-marca: var(--laranja);
+  --cor-linha: var(--fio-escuro);
+  --cor-foco: #FF8A4C;
+  color-scheme: dark;
+  color: var(--cor-texto);
+  background: var(--preto);
+}
+.secao--branca, .secao--concreto {
+  --cor-titulo: var(--preto);
+  --cor-texto: var(--texto-2);
+  --cor-forte: var(--texto);
+  --cor-rotulo: #4A4A4A;
+  --cor-destaque: var(--laranja-tinta);
+  --cor-marca: var(--laranja);
+  --cor-linha: var(--fio-claro);
+  --cor-foco: var(--laranja-tinta);
+  color-scheme: light;
+  color: var(--cor-texto);
+  background: var(--branco);
+}
+/* concreto: o tom da paleta com a textura fina de concreto liso (ladrilho sem emenda) */
+.secao--concreto { background: var(--concreto) url('/assets/img/concreto-360.webp') 0 0 / 360px 360px; }
+/* laranja: chapado com a grade técnica fina do mockup (papel quadriculado de projeto).
+   Todo texto em cima é preto; o destaque do título vira branco. */
+.secao--laranja {
+  --cor-titulo: var(--preto);
+  --cor-texto: rgb(11 11 11 / .86);
+  --cor-forte: var(--preto);
+  --cor-rotulo: var(--branco);
+  --cor-destaque: var(--branco);
+  --cor-marca: var(--branco);
+  --cor-linha: rgb(11 11 11 / .16);
+  --cor-foco: var(--preto);
+  color-scheme: light;
+  color: var(--cor-texto);
+  background:
+    repeating-linear-gradient(0deg, rgb(255 255 255 / .075) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgb(255 255 255 / .075) 0 1px, transparent 1px 44px),
+    radial-gradient(80% 120% at 85% 110%, rgb(194 65 12 / .28), transparent 60%),
+    var(--laranja);
+}
+.secao--laranja ::selection { background: var(--preto); color: var(--branco); }
+
+/* ---------------------------------------------------------------- tipografia */
+/* rótulo de seção: o prédio do logo em contorno (marcador) + texto em caixa alta */
+.rotulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cor-rotulo);
+  font: 500 15px/1.2 var(--fonte-util);
+  font-stretch: 100%;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.rotulo::before {
+  content: '';
+  flex: none;
+  width: 24px;
+  height: 23px;
+  background: var(--cor-marca);
+  -webkit-mask: var(--marca) center / contain no-repeat;
+  mask: var(--marca) center / contain no-repeat;
+}
+.titulo {
+  color: var(--cor-titulo);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-stretch: var(--largura-titulo);
+  font-size: clamp(28px, 1rem + 2.15vw, 48px);
+  line-height: 1.02;
+  letter-spacing: -.004em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+/* celular: o título acompanha a largura da tela, pra palavra comprida ("TRANSFORMAÇÕES")
+   caber inteira até em 320 px (palavra não quebra: ela estouraria a página) */
+@media (max-width: 39.99em) {
+  .titulo { font-size: min(30px, 7.4vw); }
+}
+.rotulo + .titulo { margin-top: 14px; }
+.destaque { color: var(--cor-destaque); }
+.apoio { color: var(--cor-texto); font-size: 16px; line-height: 1.65; max-width: 30em; }
+.apoio strong, .texto strong { color: var(--cor-forte); font-weight: 700; }
+/* quebra de linha só no computador (no celular o título corre solto) */
+.quebra { display: none; }
+@media (min-width: 64em) {
+  .quebra { display: inline; }
+}
+
+/* cabeçalho de seção do mockup: rótulo e título à esquerda, a linha de apoio à direita,
+   alinhada na base do título (no celular ela desce pra baixo do título) */
+.cab { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); align-items: center; column-gap: 56px; margin-bottom: clamp(28px, 2.6vw, 40px); }
+@media (min-width: 64em) and (max-width: 79.99em) {
+  .cab { grid-template-columns: minmax(0, 1fr) minmax(0, 320px); column-gap: 40px; }
+  .titulo { font-size: calc(.75rem + 2.3vw); }
+}
+@media (max-width: 63.99em) {
+  .cab { grid-template-columns: minmax(0, 1fr); row-gap: 14px; }
+}
+
+/* ---------------------------------------------------------------- botões
+   Retângulo de canto quase reto, texto em caixa alta, como no mockup. O laranja leva
+   texto preto (contraste AA). Hover: acende um pouco e sobe 1 px; o ícone anda 2 px. */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 0 28px;
+  border: 1.5px solid transparent;
+  border-radius: var(--raio);
+  font: 700 14px/1.15 var(--fonte-util);
+  font-stretch: 104%;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+  transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out), background-color .25s ease, border-color .25s ease, color .25s ease, filter .25s ease;
+}
+.btn .i { width: 22px; height: 22px; transition: transform .35s var(--ease-out); }
+.btn:active { transform: scale(.98); transition-duration: .1s; }
+.btn--laranja {
+  --cor-foco: #FFB38A;
+  background: var(--laranja);
+  color: var(--preto);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .22), 0 12px 26px -16px rgb(244 102 28 / .9);
+}
+.btn--preto { --cor-foco: var(--branco); background: var(--preto); color: var(--branco); box-shadow: 0 12px 26px -16px rgb(0 0 0 / .8); }
+.btn--contorno { border-color: rgb(255 255 255 / .62); color: var(--branco); background: rgb(11 11 11 / .2); }
+.btn--contorno-escuro { border-color: var(--preto); color: var(--preto); background: transparent; }
+@media (hover: hover) {
+  .btn--laranja:hover { filter: brightness(1.07) saturate(1.04); transform: translateY(-1px); box-shadow: inset 0 1px 0 rgb(255 255 255 / .26), 0 16px 30px -16px rgb(244 102 28 / 1); }
+  .btn--preto:hover { background: #1E1E1E; transform: translateY(-1px); }
+  .btn--contorno:hover { border-color: var(--branco); background: rgb(255 255 255 / .08); transform: translateY(-1px); }
+  .btn--contorno-escuro:hover { background: var(--preto); color: var(--branco); transform: translateY(-1px); }
+  .btn:hover .i--anda { transform: translateX(3px); }
+  .btn:active { transform: scale(.98); }
+}
+
+/* ---------------------------------------------------------------- botão flutuante do WhatsApp */
+.zap-flutuante {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--laranja);
+  color: var(--preto);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .25), 0 14px 30px -10px rgb(0 0 0 / .6), 0 8px 22px -12px rgb(244 102 28 / .9);
+  transition: transform .5s var(--ease-out), opacity .4s ease, box-shadow .3s ease, filter .3s ease;
+}
+.zap-flutuante .i { width: 30px; height: 30px; }
+.js .zap-flutuante:not(.visivel) { opacity: 0; transform: translateY(16px) scale(.7); pointer-events: none; }
+@media (hover: hover) {
+  .zap-flutuante:hover { transform: translateY(-3px) scale(1.04); filter: brightness(1.06); }
+}
+
+/* ---------------------------------------------------------------- revelação no scroll
+   O padrão é visível. Só esconde com JS ligado e sem "reduzir movimento", e o JS
+   (_base.js) marca .visivel quando o elemento entra na tela.
+   Parado, tudo esconde SÓ com opacidade: o Chrome conta o clip-path no
+   IntersectionObserver e um elemento recortado a zero nunca "entra na tela"
+   (bug do 067). Recorte e escala ficam só no primeiro quadro da animação.
+   Keyframes com fill-mode backwards: acabou a entrada, o elemento volta ao estilo
+   normal e o hover não fica preso nela.                                              */
+@keyframes sobe { from { opacity: 0; transform: translateY(22px); } }
+@keyframes aparece { from { opacity: 0; } }
+@keyframes foto-abre { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes assenta { from { transform: scale(1.08); } }
+@keyframes risca-x { from { transform: scaleX(0); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-revela]:not(.visivel) { opacity: 0; }
+  .js [data-revela].visivel { animation: sobe .9s var(--ease-suave) calc(var(--i, 0) * 90ms) backwards; }
+  .js [data-revela-lista]:not(.visivel) > * { opacity: 0; }
+  .js [data-revela-lista].visivel > * { animation: sobe .85s var(--ease-suave) calc(var(--i, 0) * 80ms) backwards; }
+  .js [data-revela="aparece"].visivel { animation: aparece 1s ease backwards; }
+  .js [data-revela="foto"].visivel { animation: foto-abre 1.15s var(--ease-in-out) calc(var(--i, 0) * 90ms) backwards; }
+  .js [data-revela="foto"].visivel img { animation: assenta 1.7s var(--ease-out) calc(var(--i, 0) * 90ms) backwards; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0ms !important;
+  }
+}

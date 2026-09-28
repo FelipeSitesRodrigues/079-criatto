@@ -1,0 +1,72 @@
+/* ---------------------------------------------------------------- serviços
+   Mockup: 8 cartões brancos em 2 linhas de 4. Foto no topo, nome em caixa alta (duas
+   linhas), uma linha de texto e o botão redondo laranja com a seta, que abre o WhatsApp
+   já com o nome do serviço (regra da casa). Borda finíssima, sombra leve, canto discreto.
+   Hover: o cartão sobe 4 px, a foto aproxima e a seta anda.                          */
+.servs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.serv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--fio-claro);
+  border-radius: var(--raio-card);
+  background: var(--branco);
+  box-shadow: 0 1px 2px rgb(11 11 11 / .04), 0 18px 34px -26px rgb(11 11 11 / .32);
+  transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out), border-color .3s ease;
+}
+.serv__foto { display: block; aspect-ratio: 1.88; overflow: hidden; background: #DAD5CD; }
+.serv__foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease-out); }
+.serv__corpo { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto 1fr; column-gap: 14px; row-gap: 10px; flex: 1; padding: 20px 20px 22px; }
+.serv__nome {
+  grid-column: 1 / -1;
+  min-height: 2.4em;
+  color: var(--preto);
+  font: 700 15.5px/1.2 var(--fonte-util);
+  font-stretch: 106%;
+  letter-spacing: .015em;
+  text-transform: uppercase;
+}
+.serv__desc { align-self: end; color: var(--texto-2); font-size: 14px; line-height: 1.5; }
+.serv__zap {
+  --cor-foco: var(--laranja-tinta);
+  align-self: end;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--laranja);
+  color: var(--preto);
+  box-shadow: 0 8px 18px -10px rgb(244 102 28 / .9);
+  transition: transform .4s var(--ease-out), filter .25s ease, box-shadow .4s var(--ease-out);
+}
+/* a área de toque do botão cobre o cartão inteiro (o botão continua sendo o único link) */
+.serv__zap::after { content: ''; position: absolute; inset: 0; }
+.serv__zap .i { width: 19px; height: 19px; transition: transform .4s var(--ease-out); }
+@media (hover: hover) {
+  .serv:hover { transform: translateY(-4px); border-color: #DCD6CD; box-shadow: 0 2px 4px rgb(11 11 11 / .05), 0 28px 44px -26px rgb(11 11 11 / .42); }
+  .serv:hover .serv__foto img { transform: scale(1.05); }
+  .serv:hover .serv__zap { filter: brightness(1.06); box-shadow: 0 10px 22px -10px rgb(244 102 28 / 1); }
+  .serv:hover .serv__zap .i { transform: translateX(2px); }
+}
+.serv:has(.serv__zap:focus-visible) { outline: 2px solid var(--laranja-tinta); outline-offset: 3px; }
+.serv__zap:focus-visible { outline: none; }
+
+@media (min-width: 40em) and (max-width: 79.99em) {
+  .servs { gap: 18px; }
+  .serv__corpo { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr auto; padding: 18px 16px 16px; }
+  .serv__nome { font-size: 14.5px; }
+  .serv__desc { align-self: start; }
+  .serv__zap { justify-self: end; width: 38px; height: 38px; }
+}
+@media (max-width: 63.99em) {
+  .servs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* celular: um por linha, como no mockup */
+@media (max-width: 39.99em) {
+  .servs { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .serv__foto { aspect-ratio: 1.78; }
+  .serv__corpo { padding: 18px 18px 20px; }
+  .serv__nome { min-height: 0; font-size: 15.5px; }
+}

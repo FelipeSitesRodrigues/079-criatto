@@ -1,0 +1,32 @@
+/* ---------------------------------------------------------------- sobre (preto)
+   Mockup: duas colunas. À esquerda rótulo, título com o fim em laranja, os parágrafos e o
+   botão de contorno com a seta; à direita a foto da entrada da casa, canto discreto.
+   Embaixo, a faixa de 4 selos com divisórias, igual à do hero.
+   Celular: texto, botão, foto e os selos em lista (mockup mobile).                  */
+.sobre__grade { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(40px, 5.2vw, 84px); align-items: center; }
+@media (min-width: 64em) {
+  .sobre .titulo { font-size: clamp(28px, 1rem + 1.9vw, 44px); }
+}
+.sobre__paragrafos { display: grid; gap: 14px; max-width: 34em; margin-top: 24px; color: var(--cor-texto); font-size: 17px; line-height: 1.62; }
+.sobre__btn { margin-top: 32px; }
+.sobre__btn .i { width: 20px; height: 20px; }
+.sobre__foto { overflow: hidden; border-radius: var(--raio-card); aspect-ratio: 1.39; background: var(--grafite); box-shadow: 0 30px 60px -40px rgb(0 0 0 / .9); }
+.sobre__foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease-out); }
+@media (hover: hover) {
+  .sobre__foto:hover img { transform: scale(1.03); }
+}
+.sobre__selos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(44px, 4.6vw, 68px); }
+
+@media (max-width: 63.99em) {
+  .sobre__grade { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .sobre__selos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 20px; }
+  .sobre__selos .selo, .sobre__selos .selo:first-child { padding-inline: 0; }
+  .sobre__selos .selo + .selo { border-left: 0; }
+}
+@media (max-width: 39.99em) {
+  .sobre__paragrafos { font-size: 16px; }
+  .sobre__btn { width: 100%; }
+  .sobre__selos { grid-template-columns: minmax(0, 1fr); gap: 22px; margin-top: 40px; }
+  .sobre__selos .selo { gap: 18px; }
+  .sobre__selos .selo__i { width: 46px; height: 46px; }
+}

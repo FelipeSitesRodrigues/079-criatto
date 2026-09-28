@@ -1,0 +1,118 @@
+{
+  "_leia": "Os 8 cartões da seção Serviços, na ordem do mockup (4 por linha). nome, descricao e mensagem vêm da copy-site.md v1.0 (bloco 4); os dois últimos (projetos e consultoria) não estão na copy: entraram pelo mockup aprovado e pelas imagens que o Felipe gerou pra eles, com o texto do próprio mockup. mensagem é o que vai entre asteriscos no WhatsApp. foto: arquivo em Recursos Site; ia = imagem gerada (ilustrativa), sem ia = foto real de obra da equipe. focoY recorta a faixa 16:9 (0 = topo, 1 = base). rodape = ordem na lista de serviços do rodapé (só os 6 do mockup). O cartão de obras corporativas usa a Plataforma Íon do portfólio antigo (o Polo Empresarial já está na galeria); recorte tira a legenda gravada na foto.",
+  "itens": [
+    {
+      "id": "casas",
+      "nome": "Construção de casas de alto padrão",
+      "descricao": "Do terreno à entrega da chave, seguindo o projeto do seu arquiteto.",
+      "mensagem": "construção de casa",
+      "foto": {
+        "arquivo": "CARDS DE SERVIÇOS/construções de casa de alto padrão..png",
+        "ia": true,
+        "focoY": 0.5
+      },
+      "alt": "Casa térrea de alto padrão com piscina, ao entardecer (imagem ilustrativa)",
+      "rodape": 1,
+      "rodapeNome": "Construção de casas"
+    },
+    {
+      "id": "apartamentos",
+      "nome": "Reforma de apartamento",
+      "descricao": "Completa ou por ambiente, dentro das regras do seu condomínio.",
+      "mensagem": "reforma de apartamento",
+      "foto": {
+        "arquivo": "CARDS DE SERVIÇOS/REFORMAS DE APARTAMENTOS.png",
+        "ia": true,
+        "focoY": 0.55
+      },
+      "alt": "Sala e cozinha integradas de apartamento reformado (imagem ilustrativa)",
+      "rodape": 2,
+      "rodapeNome": "Reforma de apartamento"
+    },
+    {
+      "id": "ampliacao",
+      "nome": "Reforma e ampliação de casa",
+      "descricao": "Suíte nova, área gourmet, fachada ou a casa inteira renovada.",
+      "mensagem": "reforma ou ampliação de casa",
+      "foto": {
+        "arquivo": "CARDS DE SERVIÇOS/REFORMA E AMPLIAÇÃO DE CASAS.png",
+        "ia": true,
+        "focoY": 0.5
+      },
+      "alt": "Área gourmet integrada à piscina numa casa ampliada (imagem ilustrativa)",
+      "rodape": 3,
+      "rodapeNome": "Reforma e ampliação"
+    },
+    {
+      "id": "hospitalares",
+      "nome": "Obras hospitalares e clínicas",
+      "descricao": "UTI, centro obstétrico, consultório e laboratório, com o rigor que a saúde exige.",
+      "mensagem": "obra hospitalar ou de clínica",
+      "foto": {
+        "arquivo": "IMAGENS SERVIÇOS/fotos folder/escolhidas/obras hospitalares/APARTAMENTO INTERNACAO VIP.JPG",
+        "focoY": 0.55,
+        "neutralizar": 0.5
+      },
+      "alt": "Apartamento de internação hospitalar em Brasília, obra da equipe Criatto",
+      "rodape": 4,
+      "rodapeNome": "Obras hospitalares e clínicas"
+    },
+    {
+      "id": "corporativas",
+      "nome": "Obras corporativas e comerciais",
+      "descricao": "Escritório, loja e agência, com cronograma pensado pra abrir no dia certo.",
+      "mensagem": "obra corporativa ou comercial",
+      "foto": {
+        "arquivo": "SITE ANTIGO/portfolio/3.png",
+        "recorte": [
+          0,
+          0.06,
+          0.975,
+          0.74
+        ],
+        "focoY": 0.5
+      },
+      "alt": "Andar corporativo com estações de trabalho e forro modular, obra da equipe Criatto",
+      "rodape": 5,
+      "rodapeNome": "Obras corporativas e comerciais"
+    },
+    {
+      "id": "instalacoes",
+      "nome": "Instalações e acabamento",
+      "descricao": "Elétrica, hidráulica, prevenção de incêndio e acabamento fino.",
+      "mensagem": "instalações e acabamento",
+      "foto": {
+        "arquivo": "CARDS DE SERVIÇOS/instalação e acabamento..png",
+        "ia": true,
+        "focoY": 0.4
+      },
+      "alt": "Forro com iluminação embutida e parede em porcelanato (imagem ilustrativa)",
+      "rodape": 6,
+      "rodapeNome": "Instalações e acabamento"
+    },
+    {
+      "id": "projetos",
+      "nome": "Projetos personalizados",
+      "descricao": "Soluções sob medida para cada necessidade.",
+      "mensagem": "projeto personalizado",
+      "foto": {
+        "arquivo": "CARDS DE SERVIÇOS/PROJETOS PERSONALIZADOS.png",
+        "ia": true,
+        "focoY": 0.5
+      },
+      "alt": "Projeto de casa desenhado sobre a prancheta, com amostras de acabamento (imagem ilustrativa)"
+    },
+    {
+      "id": "consultoria",
+      "nome": "Consultoria e planejamento",
+      "descricao": "Estudo de viabilidade, custos e cronograma.",
+      "mensagem": "consultoria e planejamento",
+      "foto": {
+        "arquivo": "CARDS DE SERVIÇOS/CONSULTORIA E PLANEJAMENTO.png",
+        "ia": true,
+        "focoY": 0.45
+      },
+      "alt": "Reunião de planejamento de obra com plantas sobre a mesa (imagem ilustrativa)"
+    }
+  ]
+}

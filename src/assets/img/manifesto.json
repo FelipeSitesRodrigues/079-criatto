@@ -1,0 +1,847 @@
+{
+ "hero-desk-960.avif": {
+  "w": 960,
+  "h": 540,
+  "kb": 39
+ },
+ "hero-desk-960.webp": {
+  "w": 960,
+  "h": 540,
+  "kb": 68
+ },
+ "hero-desk-1280.avif": {
+  "w": 1280,
+  "h": 720,
+  "kb": 61
+ },
+ "hero-desk-1280.webp": {
+  "w": 1280,
+  "h": 720,
+  "kb": 108
+ },
+ "hero-desk-1672.avif": {
+  "w": 1672,
+  "h": 941,
+  "kb": 91
+ },
+ "hero-desk-1672.webp": {
+  "w": 1672,
+  "h": 941,
+  "kb": 161
+ },
+ "logo-160.avif": {
+  "w": 160,
+  "h": 88,
+  "kb": 4
+ },
+ "logo-160.webp": {
+  "w": 160,
+  "h": 88,
+  "kb": 7
+ },
+ "logo-240.avif": {
+  "w": 240,
+  "h": 132,
+  "kb": 6
+ },
+ "logo-240.webp": {
+  "w": 240,
+  "h": 132,
+  "kb": 11
+ },
+ "logo-320.avif": {
+  "w": 320,
+  "h": 176,
+  "kb": 8
+ },
+ "logo-320.webp": {
+  "w": 320,
+  "h": 176,
+  "kb": 17
+ },
+ "logo-480.avif": {
+  "w": 480,
+  "h": 264,
+  "kb": 14
+ },
+ "logo-480.webp": {
+  "w": 480,
+  "h": 264,
+  "kb": 31
+ },
+ "sobre-560.avif": {
+  "w": 560,
+  "h": 403,
+  "kb": 24
+ },
+ "sobre-560.webp": {
+  "w": 560,
+  "h": 403,
+  "kb": 42
+ },
+ "sobre-836.avif": {
+  "w": 836,
+  "h": 601,
+  "kb": 43
+ },
+ "sobre-836.webp": {
+  "w": 836,
+  "h": 601,
+  "kb": 78
+ },
+ "serv-casas-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 14
+ },
+ "serv-casas-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 23
+ },
+ "serv-casas-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 32
+ },
+ "serv-casas-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 54
+ },
+ "serv-apartamentos-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 8
+ },
+ "serv-apartamentos-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 13
+ },
+ "serv-apartamentos-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 18
+ },
+ "serv-apartamentos-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 27
+ },
+ "serv-ampliacao-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 12
+ },
+ "serv-ampliacao-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 19
+ },
+ "serv-ampliacao-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 26
+ },
+ "serv-ampliacao-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 44
+ },
+ "serv-hospitalares-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 6
+ },
+ "serv-hospitalares-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 8
+ },
+ "serv-hospitalares-700.avif": {
+  "w": 700,
+  "h": 393,
+  "kb": 12
+ },
+ "serv-hospitalares-700.webp": {
+  "w": 700,
+  "h": 393,
+  "kb": 16
+ },
+ "serv-corporativas-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 6
+ },
+ "serv-corporativas-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 8
+ },
+ "serv-corporativas-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 12
+ },
+ "serv-corporativas-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 15
+ },
+ "serv-instalacoes-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 6
+ },
+ "serv-instalacoes-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 9
+ },
+ "serv-instalacoes-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 13
+ },
+ "serv-instalacoes-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 21
+ },
+ "serv-projetos-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 9
+ },
+ "serv-projetos-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 16
+ },
+ "serv-projetos-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 19
+ },
+ "serv-projetos-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 32
+ },
+ "serv-consultoria-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 11
+ },
+ "serv-consultoria-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 20
+ },
+ "serv-consultoria-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 23
+ },
+ "serv-consultoria-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 39
+ },
+ "obra-casa-alto-padrao-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 15
+ },
+ "obra-casa-alto-padrao-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 24
+ },
+ "obra-casa-alto-padrao-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 35
+ },
+ "obra-casa-alto-padrao-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 58
+ },
+ "obra-santa-luzia-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 11
+ },
+ "obra-santa-luzia-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 18
+ },
+ "obra-santa-luzia-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 24
+ },
+ "obra-santa-luzia-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 37
+ },
+ "obra-polo-empresarial-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 12
+ },
+ "obra-polo-empresarial-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 21
+ },
+ "obra-polo-empresarial-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 27
+ },
+ "obra-polo-empresarial-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 43
+ },
+ "obra-itau-fachada-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 10
+ },
+ "obra-itau-fachada-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 17
+ },
+ "obra-itau-fachada-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 24
+ },
+ "obra-itau-fachada-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 40
+ },
+ "obra-uti-adulto-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 8
+ },
+ "obra-uti-adulto-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 11
+ },
+ "obra-uti-adulto-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 16
+ },
+ "obra-uti-adulto-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 23
+ },
+ "obra-oncologia-star-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 7
+ },
+ "obra-oncologia-star-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 9
+ },
+ "obra-oncologia-star-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 16
+ },
+ "obra-oncologia-star-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 20
+ },
+ "obra-porto-seguro-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 8
+ },
+ "obra-porto-seguro-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 11
+ },
+ "obra-porto-seguro-700.avif": {
+  "w": 700,
+  "h": 466,
+  "kb": 15
+ },
+ "obra-porto-seguro-700.webp": {
+  "w": 700,
+  "h": 466,
+  "kb": 20
+ },
+ "obra-centro-obstetrico-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 10
+ },
+ "obra-centro-obstetrico-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 14
+ },
+ "obra-centro-obstetrico-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 23
+ },
+ "obra-centro-obstetrico-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 31
+ },
+ "obra-itau-goiania-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 8
+ },
+ "obra-itau-goiania-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 12
+ },
+ "obra-itau-goiania-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 14
+ },
+ "obra-itau-goiania-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 21
+ },
+ "obra-lab-exame-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 8
+ },
+ "obra-lab-exame-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 11
+ },
+ "obra-lab-exame-700.avif": {
+  "w": 700,
+  "h": 466,
+  "kb": 17
+ },
+ "obra-lab-exame-700.webp": {
+  "w": 700,
+  "h": 466,
+  "kb": 22
+ },
+ "obra-norte-energia-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 10
+ },
+ "obra-norte-energia-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 17
+ },
+ "obra-norte-energia-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 22
+ },
+ "obra-norte-energia-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 35
+ },
+ "obra-uti-neonatal-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 9
+ },
+ "obra-uti-neonatal-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 12
+ },
+ "obra-uti-neonatal-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 20
+ },
+ "obra-uti-neonatal-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 27
+ },
+ "obra-itau-shopping-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 8
+ },
+ "obra-itau-shopping-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 11
+ },
+ "obra-itau-shopping-700.avif": {
+  "w": 700,
+  "h": 467,
+  "kb": 16
+ },
+ "obra-itau-shopping-700.webp": {
+  "w": 700,
+  "h": 467,
+  "kb": 21
+ },
+ "obra-lab-pasteur-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 10
+ },
+ "obra-lab-pasteur-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 15
+ },
+ "obra-lab-pasteur-700.avif": {
+  "w": 700,
+  "h": 466,
+  "kb": 21
+ },
+ "obra-lab-pasteur-700.webp": {
+  "w": 700,
+  "h": 466,
+  "kb": 33
+ },
+ "obra-itau-atendimento-420.avif": {
+  "w": 420,
+  "h": 280,
+  "kb": 8
+ },
+ "obra-itau-atendimento-420.webp": {
+  "w": 420,
+  "h": 280,
+  "kb": 11
+ },
+ "obra-itau-atendimento-700.avif": {
+  "w": 700,
+  "h": 466,
+  "kb": 16
+ },
+ "obra-itau-atendimento-700.webp": {
+  "w": 700,
+  "h": 466,
+  "kb": 20
+ },
+ "ad-apartamento-antes-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 6
+ },
+ "ad-apartamento-antes-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 8
+ },
+ "ad-apartamento-antes-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 15
+ },
+ "ad-apartamento-antes-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 19
+ },
+ "ad-apartamento-depois-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 8
+ },
+ "ad-apartamento-depois-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 12
+ },
+ "ad-apartamento-depois-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 19
+ },
+ "ad-apartamento-depois-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 29
+ },
+ "ad-terreno-antes-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 10
+ },
+ "ad-terreno-antes-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 15
+ },
+ "ad-terreno-antes-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 26
+ },
+ "ad-terreno-antes-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 43
+ },
+ "ad-terreno-depois-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 10
+ },
+ "ad-terreno-depois-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 17
+ },
+ "ad-terreno-depois-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 25
+ },
+ "ad-terreno-depois-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 43
+ },
+ "ad-comercial-antes-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 10
+ },
+ "ad-comercial-antes-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 16
+ },
+ "ad-comercial-antes-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 24
+ },
+ "ad-comercial-antes-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 42
+ },
+ "ad-comercial-depois-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 11
+ },
+ "ad-comercial-depois-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 19
+ },
+ "ad-comercial-depois-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 26
+ },
+ "ad-comercial-depois-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 44
+ },
+ "ad-gourmet-antes-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 7
+ },
+ "ad-gourmet-antes-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 9
+ },
+ "ad-gourmet-antes-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 16
+ },
+ "ad-gourmet-antes-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 22
+ },
+ "ad-gourmet-depois-420.avif": {
+  "w": 420,
+  "h": 236,
+  "kb": 10
+ },
+ "ad-gourmet-depois-420.webp": {
+  "w": 420,
+  "h": 236,
+  "kb": 16
+ },
+ "ad-gourmet-depois-700.avif": {
+  "w": 700,
+  "h": 394,
+  "kb": 23
+ },
+ "ad-gourmet-depois-700.webp": {
+  "w": 700,
+  "h": 394,
+  "kb": 37
+ },
+ "tomografia-640.avif": {
+  "w": 640,
+  "h": 320,
+  "kb": 10
+ },
+ "tomografia-640.webp": {
+  "w": 640,
+  "h": 320,
+  "kb": 12
+ },
+ "tomografia-960.avif": {
+  "w": 960,
+  "h": 480,
+  "kb": 16
+ },
+ "tomografia-960.webp": {
+  "w": 960,
+  "h": 480,
+  "kb": 20
+ },
+ "tomografia-1280.avif": {
+  "w": 1280,
+  "h": 640,
+  "kb": 23
+ },
+ "tomografia-1280.webp": {
+  "w": 1280,
+  "h": 640,
+  "kb": 29
+ },
+ "cliente-rede-dor-320.webp": {
+  "w": 320,
+  "h": 75,
+  "kb": 5
+ },
+ "cliente-rede-dor-320.avif": {
+  "w": 320,
+  "h": 75,
+  "kb": 3
+ },
+ "cliente-dasa-320.webp": {
+  "w": 320,
+  "h": 87,
+  "kb": 4
+ },
+ "cliente-dasa-320.avif": {
+  "w": 320,
+  "h": 87,
+  "kb": 2
+ },
+ "cliente-itau-320.webp": {
+  "w": 210,
+  "h": 99,
+  "kb": 2
+ },
+ "cliente-itau-320.avif": {
+  "w": 210,
+  "h": 99,
+  "kb": 2
+ },
+ "cliente-banco-do-brasil-320.webp": {
+  "w": 320,
+  "h": 45,
+  "kb": 5
+ },
+ "cliente-banco-do-brasil-320.avif": {
+  "w": 320,
+  "h": 45,
+  "kb": 3
+ },
+ "cliente-porto-seguro-320.webp": {
+  "w": 320,
+  "h": 95,
+  "kb": 10
+ },
+ "cliente-porto-seguro-320.avif": {
+  "w": 320,
+  "h": 95,
+  "kb": 5
+ },
+ "cliente-norte-energia-320.webp": {
+  "w": 320,
+  "h": 98,
+  "kb": 9
+ },
+ "cliente-norte-energia-320.avif": {
+  "w": 320,
+  "h": 98,
+  "kb": 5
+ },
+ "concreto-360.webp": {
+  "w": 360,
+  "h": 360,
+  "kb": 6
+ },
+ "hero-cel-480.avif": {
+  "w": 480,
+  "h": 853,
+  "kb": 17
+ },
+ "hero-cel-480.webp": {
+  "w": 480,
+  "h": 853,
+  "kb": 47
+ },
+ "hero-cel-640.avif": {
+  "w": 640,
+  "h": 1137,
+  "kb": 26
+ },
+ "hero-cel-640.webp": {
+  "w": 640,
+  "h": 1137,
+  "kb": 75
+ },
+ "hero-cel-760.avif": {
+  "w": 760,
+  "h": 1350,
+  "kb": 35
+ },
+ "hero-cel-760.webp": {
+  "w": 760,
+  "h": 1350,
+  "kb": 98
+ },
+ "hero-cel-941.avif": {
+  "w": 941,
+  "h": 1672,
+  "kb": 48
+ },
+ "hero-cel-941.webp": {
+  "w": 941,
+  "h": 1672,
+  "kb": 134
+ }
+}
