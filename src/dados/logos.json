@@ -1,5 +1,5 @@
 {
-  "_leia": "Logos da esteira de 'Experiência com grandes marcas', em preto e branco (pedido do Usley: todas as logos, em carrossel passando). Os arquivos vêm do site antigo (SITE ANTIGO/logos-clientes, 512x155): uns são preto no branco, outros branco no preto (inverter: true). O processamento tira o fundo e grava todos em preto sobre transparente. area = o que a equipe entregou pra esse cliente, na linha de baixo do cartão. escala ajusta o tamanho visual (logo largo e baixo x logo com símbolo alto).",
+  "_leia": "Logos da esteira de 'Empresas que confiam em nosso trabalho', em preto e branco (pedido do Usley: todas as logos, em carrossel passando). Os arquivos vêm do site antigo (SITE ANTIGO/logos-clientes, 512x155): uns são preto no branco, outros branco no preto (inverter: true). O processamento tira o fundo e grava todos em preto sobre transparente. area = o que a equipe entregou pra esse cliente, na linha de baixo do cartão. escala ajusta o tamanho visual (logo largo e baixo x logo com símbolo alto).",
   "itens": [
     {
       "id": "rede-dor",

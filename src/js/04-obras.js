@@ -1,8 +1,8 @@
 // Galeria de obras: filtros, carrossel e "ver todas".
 // O trilho é scroll-snap nativo (dedo, roda e teclado já funcionam); aqui entram as setas
 // (desligadas nas pontas), os pontos do celular (um por cartão visível na página), o
-// filtro por tipo e o modo grade. Botões de fora com data-filtrar (o "Ver obras
-// hospitalares" da seção de alta complexidade) chegam aqui já com o filtro escolhido.
+// filtro por tipo e o modo grade. Botões de fora com data-filtrar (o "Ver portfólio
+// completo" da seção Por que a Criatto) chegam aqui já com o filtro escolhido.
 ;(() => {
   const secao = document.getElementById('obras')
   const caixa = secao?.querySelector('[data-obras]')

@@ -11,7 +11,7 @@
  *   fecha no link (e a seção fica logo abaixo do header) e no Esc (foco volta pro botão).
  * - Âncoras do menu (computador e celular) param com a seção logo abaixo do header.
  * - Obras: filtros (Hospitalar mostra só hospital), setas, "ver todas" (vira grade) e o
- *   "Ver obras hospitalares" da seção de alta complexidade (filtra e rola até a galeria).
+ *   "Ver portfólio completo" da seção Por que a Criatto (volta pro filtro Todos e rola até a galeria).
  * - Comparadores: teclado e mouse mexem a linha (--pos).
  * - Esteira de clientes: anda na tela, pausa com o mouse em cima, a seta empurra.
  * - Desenho do CTA: o SVG entra e os traços terminam desenhados.
@@ -172,8 +172,8 @@ try {
   await irPara('diferenciais')
   await page.click('.alta__btn')
   await espera(2200)
-  e = await page.evaluate(() => ({ top: Math.round(document.getElementById('obras').getBoundingClientRect().top), header: document.getElementById('topo').offsetHeight, aceso: document.querySelector('[data-filtro="hospitalar"]').getAttribute('aria-pressed') }))
-  ok(e.aceso === 'true' && e.top >= e.header - 2 && e.top < e.header + 30, `"Ver obras hospitalares" filtra por hospital e rola até a galeria (${e.top}px)`)
+  e = await page.evaluate(() => ({ top: Math.round(document.getElementById('obras').getBoundingClientRect().top), header: document.getElementById('topo').offsetHeight, aceso: document.querySelector('[data-filtro="todos"]').getAttribute('aria-pressed') }))
+  ok(e.aceso === 'true' && e.top >= e.header - 2 && e.top < e.header + 30, `"Ver portfólio completo" mostra todas as obras e rola até a galeria (${e.top}px)`)
 
   console.log('\nComparadores de antes e depois')
   await page.setViewport(tela(1440))

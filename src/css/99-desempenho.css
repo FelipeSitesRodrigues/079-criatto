@@ -27,7 +27,7 @@
 .antes { contain-intrinsic-size: auto 519px; }
 .alta { contain-intrinsic-size: auto 409px; }
 .como { contain-intrinsic-size: auto 327px; }
-.resultados { contain-intrinsic-size: auto 150px; }
+.resultados { contain-intrinsic-size: auto 154px; }
 .cta { contain-intrinsic-size: auto 301px; }
 .rodape { contain-intrinsic-size: auto 369px; }
 
@@ -45,22 +45,22 @@
 @media (max-width: 63.99em) {
   .servicos { contain-intrinsic-size: auto 1690px; }
   .sobre { contain-intrinsic-size: auto 1198px; }
-  .obras { contain-intrinsic-size: auto 636px; }
+  .obras { contain-intrinsic-size: auto 602px; }
   .antes { contain-intrinsic-size: auto 906px; }
-  .alta { contain-intrinsic-size: auto 696px; }
-  .como { contain-intrinsic-size: auto 963px; }
-  .resultados { contain-intrinsic-size: auto 257px; }
+  .alta { contain-intrinsic-size: auto 723px; }
+  .como { contain-intrinsic-size: auto 929px; }
+  .resultados { contain-intrinsic-size: auto 286px; }
   .cta { contain-intrinsic-size: auto 625px; }
   .rodape { contain-intrinsic-size: auto 815px; }
 }
 @media (max-width: 39.99em) {
   .servicos { contain-intrinsic-size: auto 2912px; }
   .sobre { contain-intrinsic-size: auto 1207px; }
-  .obras { contain-intrinsic-size: auto 766px; }
+  .obras { contain-intrinsic-size: auto 737px; }
   .antes { contain-intrinsic-size: auto 1584px; }
-  .alta { contain-intrinsic-size: auto 616px; }
-  .como { contain-intrinsic-size: auto 1143px; }
-  .resultados { contain-intrinsic-size: auto 338px; }
+  .alta { contain-intrinsic-size: auto 643px; }
+  .como { contain-intrinsic-size: auto 1114px; }
+  .resultados { contain-intrinsic-size: auto 366px; }
   .cta { contain-intrinsic-size: auto 529px; }
   .rodape { contain-intrinsic-size: auto 1230px; }
 }
